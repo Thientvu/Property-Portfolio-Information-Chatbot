@@ -1,0 +1,2 @@
+Consider the language L4 over the alphabet Σ = {a, b} of odd length with middle symbol a. Use the
+pumping lemma for regular languages to show that L4 is not regular.
