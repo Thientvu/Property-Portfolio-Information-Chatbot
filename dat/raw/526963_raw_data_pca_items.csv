@@ -1,0 +1,663 @@
+id,project_id,document_spot,the_data,section_reference,question_number,section_order,type
+41240751,526963,1n_additional_investigations_desc,Foil insulation was noted at the roof structure: this should be inspected for structural damage (rust of subpurlin hangers) and cut back to allow for air movement/drainage of any condensation. ,1,132,63,PcaReportDataItem
+38476464,526963,322a_cost_table_type,,3.2.2,32,2,PcaReportDataItem
+38476480,526963,3210m_cost_action_item,,3.2.10,78,10,PcaReportDataItem
+38476568,526963,655y_cost_action_item,,6.5.5,48,43,PcaReportDataItem
+38476627,526963,doc_1h_summary_cool_4,,1,999,63,PcaReportDataItem
+38476486,526963,3212b_cost_action_item,,3.2.12,27,11,PcaReportDataItem
+38476680,526963,8r_water_mold,,1.0,18,63,PcaReportDataItem
+38476619,526963,1q_summary_heat,,1,999,63,PcaReportDataItem
+38476670,526963,1j_deviation,,1.0,10,63,PcaReportDataItem
+38476560,526963,63p_cost_table_type,,6.3,99,38,PcaReportDataItem
+38476587,526963,1z_summary_beds,,1,36,63,PcaReportDataItem
+38476534,526963,54p_cost_table_type,,5.4.1,99,23,PcaReportDataItem
+38476543,526963,542w_cost_table_type,,5.4.2,99,23,PcaReportDataItem
+38476481,526963,3210p_cost_table_type,,3.2.10,79,10,PcaReportDataItem
+38476649,526963,01p_client_state,California,1,14,63,PcaReportDataItem
+38476678,526963,3_2_8p_exterior_lights,,1.0,16,63,PcaReportDataItem
+38476624,526963,doc_1e_summary_heat_5,,1,999,63,PcaReportDataItem
+38476477,526963,328m_cost_action_item,,3.2.8,8,8,PcaReportDataItem
+38476632,526963,65p_cost_table_type,,6.5.2,23,99,PcaReportDataItem
+38476466,526963,323m_cost_action_item,,3.2.3,30,3,PcaReportDataItem
+38476579,526963,1g_summary_net_rentable,24950,1,32,63,PcaReportDataItem
+38476571,526963,1a_summary_property_use,Industrial,1,24,63,PcaReportDataItem
+38476575,526963,1d_summary_floor_num,One with mezzanine,1,28,63,PcaReportDataItem
+38476572,526963,1b_summary_acres,1.45,1,25,63,PcaReportDataItem
+38476578,526963,1ea_summary_yb_source,(per the Ventura County tax assessor),1,31,63,PcaReportDataItem
+38476574,526963,1c_summary_building_num,1,1,27,63,PcaReportDataItem
+39879995,526963,31c,1.45,3.1,3,0,PcaReportDataItem
+40181434,526963,42b_horzconst,"[""Mezzanine: Steel-framed and metal grating""]",4.2,3,13,PcaReportDataItem
+40180796,526963,3211c,N/A ,3.2.11,3,11,PcaReportDataItem
+39878822,526963,31b,Rectangular,3.1,2,0,PcaReportDataItem
+40187054,526963,552ab_alrmconddesc,An annual fire alarm certification tag was not present at the fire alarm control panel. Servicing and recertification of the fire alarm system is recommended. An opinion of cost for this work is included in Table 1.,5.5.2,59,32,PcaReportDataItem
+38476603,526963,1p_summary_secroof1,,1,49,63,PcaReportDataItem
+38476545,526963,551w_cost_table_type,,5.5.1,31,32,PcaReportDataItem
+38476511,526963,52e_cs_ctt,,5.2,4,21,PcaReportDataItem
+38476623,526963,doc_1d_summary_heat_4,,1,999,63,PcaReportDataItem
+38476614,526963,1u_summary_elev_4,,1,61,63,PcaReportDataItem
+38476644,526963,01i_client_company,"GK Management Co., Inc",1,8,63,PcaReportDataItem
+38476650,526963,01q_client_zip,90230,1,15,63,PcaReportDataItem
+38476679,526963,7q_accessibility,,1.0,17,63,PcaReportDataItem
+38476561,526963,64m_cost_action_item,,6.4,99,39,PcaReportDataItem
+38476666,526963,1e_exec_sum,,1.0,5,63,PcaReportDataItem
+38476529,526963,541_distinct_elevator_types,,5.4.1,2,23,PcaReportDataItem
+38476552,526963,55p_cost_table_type,,5.5.2,61,32,PcaReportDataItem
+38476611,526963,1u_summary_elev_1,,1,58,63,PcaReportDataItem
+38476527,526963,53p_cost_table_type,,5.3,52,22,PcaReportDataItem
+38476478,526963,329p_cost_table_type,,3.2.9,59,9,PcaReportDataItem
+38476634,526963,70p_cost_table_type,,7,25,99,PcaReportDataItem
+38476596,526963,1k_summary_roof_deck,,1,44,63,PcaReportDataItem
+38476508,526963,51p_cost_table_type,,5.1,49,20,PcaReportDataItem
+38476604,526963,1pp_summary_secroof2,,1,50,63,PcaReportDataItem
+38476557,526963,62m_cost_action_item,,6.2,99,37,PcaReportDataItem
+38476522,526963,52f_pac_cai,,5.2,5,21,PcaReportDataItem
+38476540,526963,number_of_similar_elevators_4_541,,5.4.1.4,27,23,PcaReportDataItem
+38476485,526963,3212a_cost_table_type,,3.2.12,15,11,PcaReportDataItem
+38476638,526963,01b_project_address,1401 Stellar Dr,1,3,63,PcaReportDataItem
+38476615,526963,1u_summary_elev_5,,1,62,63,PcaReportDataItem
+38476719,526963,23b_zoning_contact,"Dee Lai, Assistant City Clerk",2.3,14,61,PcaReportDataItem
+38476677,526963,2_3o_regulatory,,1.0,15,63,PcaReportDataItem
+38476654,526963,01x_rm_email,lchurchill@partneresi.com,1,22,63,PcaReportDataItem
+38476717,526963,23d_fire_life_safety_violations,No Violations,2.3,10,61,PcaReportDataItem
+38476558,526963,62p_cost_table_type,,6.2,99,37,PcaReportDataItem
+38476597,526963,2j_summary_beds_comment,,1,44,63,PcaReportDataItem
+38476626,526963,doc_1g_summary_cool_3,,1,999,63,PcaReportDataItem
+38476500,526963,44p_cost_table_type,,4.4.1,26,17,PcaReportDataItem
+38476520,526963,52f_pu_cai,,5.2,5,21,PcaReportDataItem
+38476475,526963,327m_cost_action_item,,3.2.7,11,7,PcaReportDataItem
+38476602,526963,1oo_summary_primroof2,,1,48,63,PcaReportDataItem
+38476462,526963,321p_cost_table_type,,3.2.1,17,1,PcaReportDataItem
+38476526,526963,53m_cost_action_item,,5.3,51,22,PcaReportDataItem
+38476505,526963,443_cost_table_type,,4.4.3,43,17,PcaReportDataItem
+38476472,526963,326p_cost_table_type,,3.2.6,5,6,PcaReportDataItem
+38476492,526963,43p_cost_table_type,,4.3.1,11,14,PcaReportDataItem
+38476531,526963,elevator_type_541_rep,,5.4.1,29,23,PcaReportDataItem
+38476585,526963,2f_summary_net_rentable_comment,,1,34,63,PcaReportDataItem
+38476588,526963,2g_summary_tenant_spaces_comment,,1,36,63,PcaReportDataItem
+38476586,526963,1z_summary_guestrooms,,1,35,63,PcaReportDataItem
+40166017,526963,321e_municipality_system,yes,3.2.1,11,1,PcaReportDataItem
+40166690,526963,pca_reserve_yn_1a,no,3.2.1,1,1,PcaReportDataItem
+40187189,526963,93x_required,yes,9.3,5,58,PcaReportDataItem
+40187094,526963,61a_common,no,6.1,1,36,PcaReportDataItem
+40184392,526963,52c_pu_elec_manu,Carrier,5.2,152,21,PcaReportDataItem
+40178113,526963,324c_irrigation,yes,3.2.4,5,4,PcaReportDataItem
+40167508,526963,322m_pkg_os,no,3.2.2,19,2,PcaReportDataItem
+40184558,526963,52d_pu_tr,no,5.2,3,21,PcaReportDataItem
+40180742,526963,329bd_bt_survcond,Good,3.2.9,5,9,PcaReportDataItem
+40187149,526963,7d1_suff_entrance,yes,7,15,99,PcaReportDataItem
+40187190,526963,93a_wind_zone,Zone II,9.3,6,58,PcaReportDataItem
+40185363,526963,53_unit_individually_metered,none,5.3,20,22,PcaReportDataItem
+40133214,526963,21c_field_assessor,Brian ,2.1,3,59,PcaReportDataItem
+40186894,526963,551_1b_pca,no,5.5.1,3,32,PcaReportDataItem
+40187096,526963,62a_amen,no,6.2,1,37,PcaReportDataItem
+40186937,526963,551_1d_pca,no,5.5.1,5,32,PcaReportDataItem
+40180680,526963,328d_ext_light_controls,"[""Timers"", ""Photocells""]",3.2.8,4,8,PcaReportDataItem
+40187082,526963,553b_othrsysdesc,Emergency lighting was typically provided by wall- and ceiling-mounted battery-operated fixtures.,5.5.3,3,32,PcaReportDataItem
+40187127,526963,7b4_access_aisle,yes,7,5,99,PcaReportDataItem
+40180751,526963,329_sportcourts_a,none,3.2.9,49,9,PcaReportDataItem
+40185367,526963,53j_wiringevd,"[""Observation""]",5.3,28,22,PcaReportDataItem
+40169414,526963,322p_add_pave_types,yes,3.2.2,1,2,PcaReportDataItem
+40184466,526963,52c_pu_conddesc,"The package units had indicators of ware. As per discussion with the maintenance/contractor, a recommendation for replacement will be issued.  Additionally based on the subject's general location to the ocean, acceleration of exposure to the elements has reduced the units EUL. Replacement of the HVAC package units is recommended. An opinion of cost for this work is included in Table 1.",5.2,2,21,PcaReportDataItem
+40182988,526963,51bc_whtr,yes,5.1,25,20,PcaReportDataItem
+40187130,526963,7b5_level_and_obstruct,yes,7,7,99,PcaReportDataItem
+40140912,526963,24h_document_review7,Back Flow test report dated September 2022.,2.4,7,62,PcaReportDataItem
+40187118,526963,7a1_ada_survey,no,7,1,99,PcaReportDataItem
+40180826,526963,3211g,City of Oxnard,3.2.11,7,11,PcaReportDataItem
+40187121,526963,7a3_ada_complaints,no,7,5,99,PcaReportDataItem
+40131073,526963,1z_add_build_sum,no,1.0,1,63,PcaReportDataItem
+40186941,526963,551_hydrant_survcond,Good,5.5.1,43,32,PcaReportDataItem
+40182987,526963,51ba_whcond,Good,5.1,23,20,PcaReportDataItem
+40181336,526963,42_1b_pca,no,4.2,1,13,PcaReportDataItem
+40138956,526963,24g_document_review6,"Rent roll, dated April 2023",2.4,6,62,PcaReportDataItem
+40130745,526963,01r_reviewer_first_name,Chris ,1,16,63,PcaReportDataItem
+40133224,526963,21c2_field_assessor_last_name,Frawley,2.1,4,59,PcaReportDataItem
+40169419,526963,322a2_pave_cond,Good,3.2.2,2,2,PcaReportDataItem
+40182615,526963,51a_domrep,"[""Copper""]",5.1,2,20,PcaReportDataItem
+40138954,526963,24e_document_review4,Federal Emergency Management Agency (FEMA) flood hazard layer map,2.4,4,62,PcaReportDataItem
+40187116,526963,7a_ada_access_indust,no,7,22,99,PcaReportDataItem
+40182841,526963,piping_information_source,"[""Site escort""]",5.1,15,20,PcaReportDataItem
+40180715,526963,329a_site_amen,yes,3.2.9,1,9,PcaReportDataItem
+40187099,526963,65a,no,6.5,1,99,PcaReportDataItem
+40186935,526963,pca_reserve_yn_57a,no,5.5.1,99,32,PcaReportDataItem
+40186893,526963,551i_fireext,yes,5.5.1,33,32,PcaReportDataItem
+40144287,526963,321b_slope_direction,Southwest,3.2.1,3,1,PcaReportDataItem
+40184402,526963,52e_pu_elec_loc,"[""On roof""]",5.2,155,21,PcaReportDataItem
+40187159,526963,7z_ada_compliant,No readily apparent barriers were observed at the time of the assessment.,7,99,99,PcaReportDataItem
+40187125,526963,7b2_access_entrance,yes,7,3,99,PcaReportDataItem
+40178114,526963,324p_irrigation_cond,no,3.2.4,7,4,PcaReportDataItem
+40135255,526963,21e_company,Tenant (Operations Director),2.2,4,60,PcaReportDataItem
+40169607,526963,322y_curbing_survcond,Good,3.2.2,28,2,PcaReportDataItem
+40184389,526963,52a_packaged_unit_heat_source,"[""Electric resistance coils""]",5.2,150,21,PcaReportDataItem
+40169816,526963,324a_landscaping,yes,3.2.4,1,4,PcaReportDataItem
+40187077,526963,552a_smokedet,no,5.5.2,47,32,PcaReportDataItem
+40179734,526963,327g_def_desc,The gates paint was peeling. Repainting the gates can be done during the structures exterior paint procedure.,3.2.7,5,7,PcaReportDataItem
+40180778,526963,3211b,The building meter was located in the main electrical room internally at the south elevation,3.2.11,2,11,PcaReportDataItem
+40182832,526963,51d_wstobs,"[""Cast iron""]",5.1,3,20,PcaReportDataItem
+40181050,526963,41b_const,"[""Conventional spread footing system with slab-on-grade""]",4.1,7,12,PcaReportDataItem
+40180833,526963,pca_reserve_yn_11a,no,1.0,10,63,PcaReportDataItem
+40180755,526963,pca_reserve_yn_9a,none,1.0,8,63,PcaReportDataItem
+40186919,526963,pca_reserve_yn_56a,no,1.0,10,63,PcaReportDataItem
+40182420,526963,431c_soffit,"[""Other"", ""painted concrete entrance""]",4.3.1,4,14,PcaReportDataItem
+40180745,526963,329da_garage,none,3.2.9,13,9,PcaReportDataItem
+40135237,526963,21d_field_escort_fn,Tyler,2.2,2,60,PcaReportDataItem
+40187123,526963,7b1_parking_req,yes,7,1,99,PcaReportDataItem
+40184394,526963,52d_pu_elec_cap,5 tons,5.2,153,21,PcaReportDataItem
+40185851,526963,551a_fsupp,yes,5.5.1,1,32,PcaReportDataItem
+40141754,526963,31d_additional,"The parcel of land was located in an industrial area, north (200') of the southern intersection of Stellar Drive and Westar Drive.",3.1,4,0,PcaReportDataItem
+40131107,526963,1a_plan_cap_impr_pca,no,1.0,99,63,PcaReportDataItem
+40167560,526963,322o_pavement_type,"[""Asphalt""]",3.2.2,22,2,PcaReportDataItem
+40138972,526963,24m_document_review12,"PCA Pre-Survey Questionnaire, prepared by Meca Cephas",2.4,12,62,PcaReportDataItem
+40184419,526963,52b_pu_cond,Poor,5.2,1,21,PcaReportDataItem
+40186930,526963,where_is_the_chemical_tank_551,IT room grade level,5.5.1,41,32,PcaReportDataItem
+40180692,526963,pca_reserve_yn_8a,no,1.0,7,63,PcaReportDataItem
+40185374,526963,53n_emgen,no,5.3,45,22,PcaReportDataItem
+40184410,526963,52r_vent_type,"[""Bathroom fans"", ""Common fans that vent through roof""]",5.2,177,21,PcaReportDataItem
+40187107,526963,commercial_tenants_64,"[""Single Tenant""]",6.4,8,39,PcaReportDataItem
+40138971,526963,24l_document_review11,Final Inspection Report April 1998.,2.4,11,62,PcaReportDataItem
+40180829,526963,3211h,City of Oxnard,3.2.11,8,11,PcaReportDataItem
+40184559,526963,pca_reserve_yn_25a,no,1.0,23,63,PcaReportDataItem
+40187053,526963,552aa_alrmcond,Good to Poor,5.5.2,58,32,PcaReportDataItem
+40179613,526963,327b_type,"[""Other"", ""refuse enclosures""]",3.2.7,2,7,PcaReportDataItem
+40179607,526963,327a,yes,3.2.7,1,7,PcaReportDataItem
+40185369,526963,53k_wiring,"[""Copper""]",5.3,27,22,PcaReportDataItem
+40185868,526963,551b_fsuppserv,The riser was located in the warehouse's southeast corner.,5.5.1,3,32,PcaReportDataItem
+40187157,526963,7d7_height_comp,yes,7,27,99,PcaReportDataItem
+40186917,526963,551p_fire_ex_cond,Good,5.5.1,36,32,PcaReportDataItem
+40187015,526963,552_fire_alarm_type,Central fire alarm with local notification,5.5.2,80,32,PcaReportDataItem
+40184391,526963,52b_pu_elec_quant,Multiple,5.2,151,21,PcaReportDataItem
+40259647,526963,441bp_skylights,"[""Conventional domed translucent Plexiglass""]",4.4.1,5,17,PcaReportDataItem
+40263476,526963,pca_reserve_yn_20a,no,1.0,18,63,PcaReportDataItem
+40226777,526963,pca_reserve_yn_15a,no,1.0,13,63,PcaReportDataItem
+40217028,526963,64c_floor,"[""Carpet"", ""Wood"", ""Sealed Polished Concrete""]",6.4,2,39,PcaReportDataItem
+40230793,526963,451_1f_pca,no,4.5,1,19,PcaReportDataItem
+40217221,526963,64aa_cond,Good to Poor,6.4,5,39,PcaReportDataItem
+40259634,526963,441d_parapet_desc,"The parapet roof joint corners were aged and cracked, with some roofing material coming apart at the joint seams between panels.",4.4.1,4,17,PcaReportDataItem
+40230243,526963,describe_door_issues_in_complete_sentences_43,"The ramp access location was reported to have water intrusion issues at the bottom base of the door. The doors at the north and south corners have storm water grates at the entrance points. The channels were observed to be littered with debris, had vegetative growth and sections of the metal grates were missing. This is believed to be the contributing factor for the water intrusion. Clearing the channels of the debris, vegetative growth, pressure jet cleaning the outlets and replacing the missing grates is recommended. An opinion of cost for this work is included in Table 1.",4.3.3,34,15,PcaReportDataItem
+40218927,526963,8b_microbial_water_desc,"however, as discussed in the above sections of this report, water damaged was observed Section 6.4 Commercial Tenant Spaces and section 4.3 Facades and Curtain Walls, water intrusion along east and south elevation walls. See the above referenced sections of this report for further discussion and recommended repairs.",8.0,7,54,PcaReportDataItem
+40218832,526963,pca_reserve_yn_39a,no,1.0,37,63,PcaReportDataItem
+40263418,526963,443_roof_mounted_equipment_condition,Good to Poor,4.4.3,41,17,PcaReportDataItem
+40230811,526963,45c_intstr,"[""Wooden construction""]",4.5,4,19,PcaReportDataItem
+40231563,526963,45d_intstrfin,"[""Carpet"", ""Wooden Plank""]",4.5,5,19,PcaReportDataItem
+40250520,526963,51ac_conddesc,"There was a broken discharge pipe at the south elevation of the structure. It is recommended that the broken pipe be repaired. 
+There was a safety cage at the water supply anti-syphoning east elevation location that was broken and is disconnected from the base. Repair or replacement of the safety cage is recommended. An opinion of cost for this work is included in Table 1.",5.1,19,20,PcaReportDataItem
+40262962,526963,442b_draindest,"[""Grade and Storm Drain System""]",4.4.2,31,17,PcaReportDataItem
+40261913,526963,441_identify_party_who,AMS Construction,4.4.1,14,17,PcaReportDataItem
+38476708,526963,23d_building_code_violations,No Violations,2.3,4,61,PcaReportDataItem
+38476616,526963,1v_summary_fire_prot,"Wet-pipe sprinkler system, fire extinguishers, chemical fire suppression system",1,63,63,PcaReportDataItem
+38476609,526963,1z_summary_hvac,Package,1,55,63,PcaReportDataItem
+38476598,526963,1m_summary_primfac,Painted concrete tilt-up wall panels,1,45,63,PcaReportDataItem
+38476651,526963,01s_reviewer_last_name,Link,1,17,63,PcaReportDataItem
+38476606,526963,1y_summary_total_parking,55,1,52,63,PcaReportDataItem
+38476590,526963,1h_summary_const,Concrete slab-on-grade over spread footings,1,39,63,PcaReportDataItem
+38476608,526963,1y_summary_van_parking,two,1,54,63,PcaReportDataItem
+38476595,526963,1k_summary_roof_frame,Wood beams with plywood platform,1,43,63,PcaReportDataItem
+38476592,526963,1j_summary_vert_cons,"Concrete tilt-wall panels at perimeters, interior steel pier supports",1,41,63,PcaReportDataItem
+40133225,526963,21g_limiting_cond,no,2.1,4,59,PcaReportDataItem
+40182952,526963,51f_whdetail,Observed water heater was manufactured by Rheem and had a capacity of approximately 25-gallons. The units age was unknown.,5.1,22,20,PcaReportDataItem
+40135286,526963,23e_building_code_findings,Inspections are completed during the construction process. Additional inspections are not performed.,2.3,6,61,PcaReportDataItem
+40176878,526963,324g_def_desc,"Based on the CC&R's and discussions with the management company, all ""common"" landscape areas are expensed through the HOA fees. All landscape areas within the subject's general area is ownership responsibility. Based on this,  barren turf was observed throughout the site typical of conditions noted to the south elevation of the structure. Refurbishment of the turf is recommended.
+Trees, shrubs and Ivy (growing on the walls) were observed impeding on the building rooftop and façade at points along the north, south and east walls . No portion of any vegetation should be in contact with the building exterior. It is recommended that the trees and shrubs  be trimmed back and the ivy removed. An opinion of cost for this work is included in Table 1.
+General cleaning and routine maintenance, including as-needed replacement of vegetation, is anticipated throughout the evaluation period.",3.2.4,4,4,PcaReportDataItem
+40135273,526963,22d_additional_interviewed,no,2.2,9,60,PcaReportDataItem
+40179596,526963,326c_survcond,Good,3.2.6,3,6,PcaReportDataItem
+40167526,526963,322h_ada,4,3.2.2,14,2,PcaReportDataItem
+40144272,526963,321a_slope_sev,Flat,3.2.1,2,1,PcaReportDataItem
+40169691,526963,323r_unit_patios_agency,none,3.2.3,8,3,PcaReportDataItem
+38476706,526963,23b_building_code_contact,"Dee Lai, Assistant City Clerk",2.3,2,61,PcaReportDataItem
+38476720,526963,23d_zoning_violations,No Violations,2.3,16,61,PcaReportDataItem
+40179579,526963,326a_signage,yes,3.2.6,1,6,PcaReportDataItem
+40187120,526963,7a2_ada_improvement,no,7,2,99,PcaReportDataItem
+40182892,526963,area_served_by_water_heating_system_51,tenant space restrooms and break areas,5.1,20,20,PcaReportDataItem
+39117404,526963,9c_date,"January 20, 2010",9.1,2,56,PcaReportDataItem
+39117396,526963,9b_panel_number,06111C0916E,9.1,1,56,PcaReportDataItem
+38476583,526963,1ec_summary_nra_source,(per the rent roll dated April 2023),1,33,63,PcaReportDataItem
+38476631,526963,1p_approx_parcel_summary,100%,1.0,888,63,PcaReportDataItem
+38476580,526963,1eb_summary_ga_source,(per the Ventura County tax assessor),1,32,63,PcaReportDataItem
+38756800,526963,321aa,no,3.2.1,1,1,PcaReportDataItem
+38756805,526963,1a_planned_capital_desc2,"Waterproofing  - $15,000, 2023.",1,99,63,PcaReportDataItem
+40181344,526963,information_source_42,"[""Property management"", ""Site escort"", ""Experience"", ""Observation""]",4.2,1,13,PcaReportDataItem
+40169475,526963,pca_reserve_yn_50a,yes,1.0,4,63,PcaReportDataItem
+40184384,526963,52a_1b_pca,no,5.2,1,21,PcaReportDataItem
+40181067,526963,pca_reserve_yn_13a,no,1.0,11,63,PcaReportDataItem
+40169621,526963,323a_walkways,"[""Cast-in-place concrete""]",3.2.3,3,3,PcaReportDataItem
+40130751,526963,01t_reviewer_title,Project Manager,1,18,63,PcaReportDataItem
+40187145,526963,7c7_comp_handrail,none,7,13,99,PcaReportDataItem
+40169826,526963,234b_landsc_type,"[""Grass-covered lawns"", ""Trees"", ""Shrubs""]",3.2.4,2,4,PcaReportDataItem
+40187074,526963,pca_reserve_yn_34a,no,1.0,32,63,PcaReportDataItem
+40138926,526963,24c_document_review2,City of Oxnard Zoning Map,2.4,2,62,PcaReportDataItem
+40185370,526963,53aa_eleccond,Good,5.3,38,22,PcaReportDataItem
+40180754,526963,329g_other,none,3.2.9,55,9,PcaReportDataItem
+40185355,526963,amperage_supplied_to_main_switchgearpanel_53sb,277/480,5.3,4,22,PcaReportDataItem
+40135232,526963,22p_site_escort_available,yes,2.2,1,60,PcaReportDataItem
+40185372,526963,53m_stablok,no,5.3,23,22,PcaReportDataItem
+40169620,526963,are_the_walkways_maintained_by_the_property_323,yes,3.2.3,2,3,PcaReportDataItem
+40167535,526963,322l_pkg_desc,"Concrete pavement was present at right-of-way approaches (stamped and color coated), in front of dumpster enclosures and at loading dock area, along the west elevation.",3.2.2,18,2,PcaReportDataItem
+40185358,526963,53_single_panel_manufacturer,Challenger and  Cutler Hammer General Electric,5.3,9,22,PcaReportDataItem
+40135262,526963,21f_phone,714-724-8926,2.2,6,60,PcaReportDataItem
+40183000,526963,51_domestic_water_booster,no,5.1,51,20,PcaReportDataItem
+40182398,526963,431a_primfac,"[""Concrete tilt-up panels""]",4.3.1,1,14,PcaReportDataItem
+40180830,526963,3211i,Good,3.2.11,12,11,PcaReportDataItem
+40166709,526963,322a1_access,"Vehicular access was provided at multiple entrances points from Titan Place at the north elevation, Stellar Drive at the west elevation and Pacific Avenue at the east elevation .  The subject's primary entrance point was located toward the southwest entrance at the Stellar Drive..",3.2.2,2,2,PcaReportDataItem
+40187087,526963,pca_reserve_yn_35a,no,1.0,33,63,PcaReportDataItem
+40182880,526963,51ab_conddesc,no,5.1,16,20,PcaReportDataItem
+40180718,526963,329b_benches_tables,yes,3.2.9,2,9,PcaReportDataItem
+40180763,526963,3211a,Southern California Edison,3.2.11,1,11,PcaReportDataItem
+40185356,526963,53e_epanelloc,along the inside face of the exterior wall and in the electrical room,5.3,9,22,PcaReportDataItem
+40179841,526963,328a_extlt,yes,3.2.8,1,8,PcaReportDataItem
+40187173,526963,92a_seismic_zone,Zone 4,9.2,4,57,PcaReportDataItem
+40167514,526963,parking_type_single_322,Surface lots,3.2.2,11,2,PcaReportDataItem
+40186547,526963,551d_pump,no,5.5.1,6,32,PcaReportDataItem
+40185353,526963,53_service_type,Individual building service,5.3,2,22,PcaReportDataItem
+40186892,526963,pca_reserve_yn_46a,no,1.0,44,63,PcaReportDataItem
+40186901,526963,551j_fireext,The annual inspection of the fire extinguishers last occurred in October 2022,5.5.1,35,32,PcaReportDataItem
+40186890,526963,551aa_suppcond,Good,5.5.1,14,32,PcaReportDataItem
+40184407,526963,52q_acc_area_heat_type,"[""Other"", ""same as main""]",5.2,176,21,PcaReportDataItem
+40130737,526963,01r_client_stamp_required,no,1.0,10,63,PcaReportDataItem
+40181029,526963,41_1a_pca,no,4.1,1,12,PcaReportDataItem
+38476696,526963,11a_limitations,,11.0,99,99,PcaReportDataItem
+38476584,526963,1z_summary_residential_units,,1,34,63,PcaReportDataItem
+38476516,526963,52e_beh_ctt,,5.2,4,21,PcaReportDataItem
+38476691,526963,1_2k_scope_of_work,,1.0,99,63,PcaReportDataItem
+38476538,526963,number_of_similar_elevators_3_541,,5.4.1.3,20,23,PcaReportDataItem
+38476553,526963,553y_cost_table_type,,5.5.3,6,32,PcaReportDataItem
+38476548,526963,551_ext_cost_action_item,,5.5.1,39,32,PcaReportDataItem
+38476645,526963,01j_client_first_name,Jason,1,9,63,PcaReportDataItem
+38476633,526963,65m_cost_action_item,,6.5.2,24,99,PcaReportDataItem
+38476489,526963,41p_cost_table_type,,4.1,22,12,PcaReportDataItem
+38476582,526963,1z_summary_tenant_spaces,1,1,33,63,PcaReportDataItem
+38476576,526963,1e_summary_year_built,1999,1,30,63,PcaReportDataItem
+38476515,526963,52e_pac_ctt,,5.2,4,21,PcaReportDataItem
+38476653,526963,01v_rm_last_name,Churchill,1,20,63,PcaReportDataItem
+38476643,526963,01g_report_date,"May 2, 2023",1,7,63,PcaReportDataItem
+38476669,526963,1h_cost_exclusion,,1.0,8,63,PcaReportDataItem
+38476676,526963,1_3m_desc_qualifier,,1.0,1,63,PcaReportDataItem
+38476581,526963,2e_summary_gross_building_comment,,1,32,63,PcaReportDataItem
+38476639,526963,01c_project_city,Oxnard,1,4,63,PcaReportDataItem
+38476656,526963,7b_property_type,,7,1,99,PcaReportDataItem
+38476517,526963,52e_uh_ctt,,5.2,4,21,PcaReportDataItem
+38476549,526963,551_hydrant_cost_action_item,,5.5.1,45,32,PcaReportDataItem
+38476704,526963,23a_building_code_name,Online Records Request,2.3,1,61,PcaReportDataItem
+38476655,526963,01y_rm_phone,310-765-7271,1,23,63,PcaReportDataItem
+38476621,526963,doc_1b_summary_heat_2,,1,999,63,PcaReportDataItem
+38476682,526963,10a_out_of_scope,,10.0,99,99,PcaReportDataItem
+38476471,526963,325p_cost_table_type,,3.2.5,7,5,PcaReportDataItem
+38476483,526963,3211m_cost_action_item,,3.2.11,15,11,PcaReportDataItem
+38476694,526963,8_2_pest_mgmt,,8,99,99,PcaReportDataItem
+38476497,526963,433z_cost_action_item,,4.3.3,36,15,PcaReportDataItem
+38476688,526963,1f_priority_repair_lang,,1,99,63,PcaReportDataItem
+38476629,526963,1t_summary_wiring,Copper,1.0,57,63,PcaReportDataItem
+38476605,526963,1y_summary_parking_area,Asphalt paved surface lots,1,51,63,PcaReportDataItem
+38476625,526963,doc_1f_summary_cool_2,,1,999,63,PcaReportDataItem
+38476672,526963,1b_deviation_text,,1.0,2,63,PcaReportDataItem
+38476674,526963,1_1k_purpose,,1.0,11,63,PcaReportDataItem
+38476607,526963,1y_summary_ada_parking,Four,1,53,63,PcaReportDataItem
+38476600,526963,2k_summary_acres_comment,(per the Ventura County tax assessor),1,46,63,PcaReportDataItem
+38476610,526963,1s_summary_domrep_pipe,Copper,1,56,63,PcaReportDataItem
+38476577,526963,1f_summary_gross_building,26913,1,31,63,PcaReportDataItem
+38476692,526963,70p_future_renovation,,7.0,99,45,PcaReportDataItem
+40259955,526963,441a_primroof,"[""Built-up roofing with mineral-surfaced cap sheet""]",4.4.1,11,17,PcaReportDataItem
+40261926,526963,441d_proofcond,Poor,4.4.1,15,17,PcaReportDataItem
+40230803,526963,45b_extstr,"[""Not provided""]",4.5,3,19,PcaReportDataItem
+40226772,526963,431f_sealcond,Fair to Poor,4.3.1,9,14,PcaReportDataItem
+40263386,526963,443_is_there_roof_mounted_equipment,yes,4.4.3,39,17,PcaReportDataItem
+40230801,526963,452_1g_pca,no,4.5,1,19,PcaReportDataItem
+40217232,526963,64ab_conddesc,The internal water intrusion areas have areas of damage carpet and possible gypsum board. Repair and replacement of all water damaged interior elements is recommended (one issues have been resolved). An opinion of cost for this work is included in Table 1.,6.4,6,39,PcaReportDataItem
+40231576,526963,pca_reserve_yn_21a,no,1.0,19,63,PcaReportDataItem
+40226668,526963,431dd_facade_ordinance,Not applicable - no façade ordinance,4.3.1,10,14,PcaReportDataItem
+40226783,526963,432_1d_pca,no,4.3,2,99,PcaReportDataItem
+40228254,526963,433ap_oh_door,"[""Steel panel coiling""]",4.3.3,28,15,PcaReportDataItem
+40261888,526963,441p_prim_warranty,A roof warranty was not provided for review.,4.4.1,13,17,PcaReportDataItem
+40261883,526963,441_if_so_how_was_it_provided,"[""Roof hatch""]",4.4.1,9,17,PcaReportDataItem
+40262963,526963,442c_rdraincond,Fair to Poor,4.4.2,32,17,PcaReportDataItem
+40259131,526963,441b_parapet,"[""Stone coping""]",4.4.1,1,17,PcaReportDataItem
+40227152,526963,432b_windfrm,"[""Aluminum""]",4.3.2,14,14,PcaReportDataItem
+40230912,526963,45z_int_str_hand,"[""Steel pipe"", ""Wood""]",4.5,15,19,PcaReportDataItem
+40226786,526963,432a_wind,"[""Fixed Single-Pane"", ""Storefront with entry doors""]",4.3.2,13,14,PcaReportDataItem
+40259806,526963,443_skylight_conddesc,"The skylights appeared to generally be in fair condition. Skylights EUL range from 10 -15 years. Based on the subject's construction date 1999, with no information provided regarding the age of the skylights, it is recommended that the skylights be replaced in the early period of the term. 
+ The skylights were not provided with fall protection around them. It is recommended that fall protection be installed. An opinion of cost for this work is included in Table 1.",4.4.3,7,17,PcaReportDataItem
+40217208,526963,64b_commten,"According to property management, the building was configured for one tenant. Interior doors were typically stained, solid core wood set in metal frames. Miscellaneous cabinetry was located at break and office areas.",6.4,9,39,PcaReportDataItem
+40263382,526963,pca_reserve_yn_19a,no,1.0,17,63,PcaReportDataItem
+40230794,526963,45a_frescp,"[""Not provided""]",4.5,1,19,PcaReportDataItem
+40259144,526963,441ap_flash_mat,"[""Similar to roofing membrane""]",4.4.1,2,17,PcaReportDataItem
+40217206,526963,64e_ceiling,"[""Suspended Acoustic Tiles"", ""Painted Gypsum Board"", ""Exposed Structure""]",6.4,4,39,PcaReportDataItem
+40262958,526963,442a_drain,"[""Overflow scuppers"", ""Roof Drains & Interior Leaders""]",4.4.2,30,17,PcaReportDataItem
+40217169,526963,64d_wall,"[""Painted Gypsum Board"", ""Painted CMU""]",6.4,3,39,PcaReportDataItem
+40263387,526963,443_what_roof_mounted_items,"[""Roof access hatch"", ""HVAC equipment""]",4.4.3,40,17,PcaReportDataItem
+40230144,526963,433ep_oh_door_equip,"[""Bumpers"", ""Built-up concrete ramp permitting drive-in access""]",4.3.3,32,15,PcaReportDataItem
+40230094,526963,433bp_oh_door_quant,4,4.3.3,31,15,PcaReportDataItem
+40263383,526963,442_was_ponding_observed,no,4.4.2,34,17,PcaReportDataItem
+40226672,526963,431e_ptcond,Fair,4.3.1,7,14,PcaReportDataItem
+40230788,526963,pca_reserve_yn_17a,no,1.0,15,63,PcaReportDataItem
+40230889,526963,45y_int_str_guard,"[""Wood""]",4.5,14,19,PcaReportDataItem
+40230808,526963,45f_balctyp,"[""Not provided""]",4.5,6,19,PcaReportDataItem
+40227406,526963,433_1e_pca,no,4.3,3,99,PcaReportDataItem
+40230214,526963,433c_doorcond,Good to Fair,4.3.3,33,15,PcaReportDataItem
+40227156,526963,432c_windcond,Good to Poor,4.3.2,16,14,PcaReportDataItem
+40230142,526963,433dp_oh_door_op,"[""Manual"", ""Electric openers""]",4.3.3,29,15,PcaReportDataItem
+40226712,526963,pca_reserve_yn_53a,yes,1.0,7,63,PcaReportDataItem
+40263449,526963,443_roof_mounted_equipment_conddesc,The roof hatch is missing safety railing. Installation of roof hatch railing is recommended.  An opinion of cost for this work is included in Table 1.,4.4.3,999,17,PcaReportDataItem
+40227163,526963,describe_window_issues_in_complete_sentences_43,"There were possible window leaks reported at the fixed units on the east side of the building (see above for details and recommends).
+There was a broken window located at the southeast corner warehouse area. Replacement of the broken window is recommended. An opinion of cost for this work is included in Table 1.",4.3.2,17,14,PcaReportDataItem
+40228207,526963,433x_primdoor_hardware,"[""Exterior pulls"", ""Lever handle"", ""Closers"", ""Deadbolts"", ""Other"", ""electronic key code entrance""]",4.3.3,25,15,PcaReportDataItem
+40261886,526963,primary_roof_installation_date_44,Not provided,4.4.1,12,17,PcaReportDataItem
+40218924,526963,8h_can_lang_3,No suspect microbial growth but areas of water damage,8,10,99,PcaReportDataItem
+40259958,526963,primary_roof_type_44,"[""Flat/low-slope""]",4.4.1,10,17,PcaReportDataItem
+40262957,526963,pca_reserve_yn_18a,yes,1.0,16,63,PcaReportDataItem
+40268274,526963,pca_reserve_desc_18b,Annual roof maintenance including coating of the corrugated metal awnings is recommended during the term.  Replacement of skylights is anticipated during the evaluation period. An opinion of cost for this work is included in Table 2.,4.4.1,60,17,PcaReportDataItem
+40226717,526963,pca_reserve_desc_53b,Repair and maintenance of loading dock doors and equipment is anticipated during the term.   An opinion of cost for this work is included in Table 2.,4.3.1,17,14,PcaReportDataItem
+39117405,526963,9a_flood_zone,"[""Zone X (unshaded)""]",9.1,3,56,PcaReportDataItem
+38756784,526963,322a_paving,yes,3.2.2,1,2,PcaReportDataItem
+40167525,526963,322g_spaces,55,3.2.2,13,2,PcaReportDataItem
+40182948,526963,51e_whdesc,"[""Electric - central WH""]",5.1,21,20,PcaReportDataItem
+40187197,526963,93d_hzone,no,9.3,8,58,PcaReportDataItem
+40181057,526963,41c_walls,"[""None - below grade portions not present""]",4.1,8,12,PcaReportDataItem
+40182377,526963,42g_frtp,Not Observed,4.2,9,13,PcaReportDataItem
+40138916,526963,24a_document_review,Ventura County Tax Assessor property information: 220-0-29-135,2.4,1,62,PcaReportDataItem
+40140949,526963,24j_document_review9,Channel Island Business Center Owners Association CC&R documents.,2.4,9,62,PcaReportDataItem
+40180747,526963,swimming_pool_329,none,3.2.9,19,9,PcaReportDataItem
+40187136,526963,7c3_proper_slope,yes,7,5,99,PcaReportDataItem
+40180675,526963,328c_soffit_type,"[""Halogen""]",3.2.8,3,8,PcaReportDataItem
+40182607,526963,51b_1b_pca,no,5.1,1,20,PcaReportDataItem
+40169608,526963,pca_reserve_yn_51a,no,1.0,5,63,PcaReportDataItem
+40135267,526963,22a_associated_years,Six years,2.2,7,60,PcaReportDataItem
+40180750,526963,329f_totlot,none,3.2.9,44,9,PcaReportDataItem
+40185364,526963,53l_gfci,yes,5.3,40,22,PcaReportDataItem
+40183004,526963,51_sewage_ejector_pumps,no,5.1,55,20,PcaReportDataItem
+40187152,526963,7d3_clear_floor_area,yes,7,19,99,PcaReportDataItem
+40140930,526963,24i_document_review8,Parcel Map,2.4,8,62,PcaReportDataItem
+40182834,526963,51c_wstrep,"[""Cast iron""]",5.1,4,20,PcaReportDataItem
+40169686,526963,323p_handrail_desc,railing was not observed.,3.2.3,5,3,PcaReportDataItem
+40135269,526963,22b_single_coop,yes,2.2,8,60,PcaReportDataItem
+40181035,526963,41a_source,"[""Property management"", ""Site escort"", ""Experience""]",4.1,6,12,PcaReportDataItem
+40187050,526963,central_panel_manufacturer_552,Silent Knight,5.5.2,50,32,PcaReportDataItem
+40179583,526963,326b_sign_type,"[""Facade-mounted, metal signage"", ""Vinyl window decals""]",3.2.6,2,6,PcaReportDataItem
+40185865,526963,fire_protection_system_551,Wet-pipe,5.5.1,2,32,PcaReportDataItem
+40138911,526963,24_any_document_reviewed,yes,2.4,1,62,PcaReportDataItem
+40169442,526963,322su_paveseal_survcond,Poor,3.2.2,3,2,PcaReportDataItem
+40131097,526963,1d_any_reported_issues,yes,1,69,63,PcaReportDataItem
+38476493,526963,43m_cost_action_item,,4.3.1,12,14,PcaReportDataItem
+38476668,526963,1g_replacement_repair,,1.0,7,63,PcaReportDataItem
+38476504,526963,443_cost_action_item,,4.4.3,42,17,PcaReportDataItem
+38476524,526963,52f_uh_cai,,5.2,5,21,PcaReportDataItem
+38476689,526963,1f_operational_repair_lang,,1,99,63,PcaReportDataItem
+38476564,526963,653w_cost_action_item,,6.5.3,35,41,PcaReportDataItem
+38476652,526963,01u_rm_first_name,Lyly,1,19,63,PcaReportDataItem
+38476473,526963,326m_cost_action_item,,3.2.6,6,6,PcaReportDataItem
+38476685,526963,1c_overall_detailed_observations,,1,99,63,PcaReportDataItem
+38476559,526963,63m_cost_action_item,,6.3,99,38,PcaReportDataItem
+38476612,526963,1u_summary_elev_2,,1,59,63,PcaReportDataItem
+38476686,526963,1f_critical_repair_lang,,1,99,63,PcaReportDataItem
+38476640,526963,01d_project_state,California,1,5,63,PcaReportDataItem
+38476646,526963,01k_client_last_name,Mandler,1,10,63,PcaReportDataItem
+38476465,526963,322b_cost_action_items,,3.2.2,33,2,PcaReportDataItem
+38476491,526963,42m_cost_action_item,,4.2,17,13,PcaReportDataItem
+38476521,526963,52f_hs_cai,,5.2,5,21,PcaReportDataItem
+38476695,526963,9_3_pga_lang,,9,99,99,PcaReportDataItem
+38476525,526963,52m_cost_action_item,,5.2,6,21,PcaReportDataItem
+38476518,526963,52f_cs_cai,,5.2,5,21,PcaReportDataItem
+38476664,526963,1c_cover_letter,,1.0,3,63,PcaReportDataItem
+38476484,526963,3212a_cost_action_item,,3.2.12,14,11,PcaReportDataItem
+38476530,526963,number_of_similar_elevators,,5.4.1,6,23,PcaReportDataItem
+38476512,526963,52e_ss_ctt,,5.2,4,21,PcaReportDataItem
+38476541,526963,elevator_type_5_541,,5.4.1.5,29,23,PcaReportDataItem
+38476519,526963,52f_ss_cai,,5.2,5,21,PcaReportDataItem
+38476523,526963,52f_beh_cai,,5.2,5,21,PcaReportDataItem
+38476641,526963,01zp_project_county,Ventura,1,7,63,PcaReportDataItem
+38476514,526963,52e_hs_ctt,,5.2,4,21,PcaReportDataItem
+38476675,526963,1_2l_cost_eval,,1.0,12,63,PcaReportDataItem
+38476546,526963,551x_cost_action_item,,5.5.1,32,32,PcaReportDataItem
+38476551,526963,55m_cost_action_item,,5.5.2,60,32,PcaReportDataItem
+38476554,526963,553z_cost_action_item,,5.5.3,7,32,PcaReportDataItem
+38476536,526963,number_of_similar_elevators_2_541,,5.4.1.2,13,23,PcaReportDataItem
+38476556,526963,61p_cost_table_type,,6.1,99,36,PcaReportDataItem
+38476635,526963,70p_cost_action_item,,7,26,99,PcaReportDataItem
+38476642,526963,01e_project_zip,93033,1,6,63,PcaReportDataItem
+38476502,526963,442w_cost_table_type,,4.4.2,37,17,PcaReportDataItem
+38476467,526963,323p_cost_table_type,,3.2.3,31,3,PcaReportDataItem
+38476665,526963,1d_cover_letter,,1.0,4,63,PcaReportDataItem
+38476591,526963,1i_summary_walls,,1,40,63,PcaReportDataItem
+38476630,526963,1z_summary_number_of_pads,,1.0,99,63,PcaReportDataItem
+40169476,526963,pca_reserve_desc_50b,Reapplication of asphalt seal coat is anticipated during the evaluation period. An opinion of cost for this work is included in Table 2.,3.2.2,14,2,PcaReportDataItem
+38756787,526963,322p_pavement_survcond,Fair,3.2.2,23,2,PcaReportDataItem
+38756788,526963,322s_pavement_def,"Linear cracking, map or alligator cracking  were noted at the north, east and south elevations. Repair of the noted area is recommended. These  limited cracks and damaged areas can be repaired during the asphalt pavement sealant and striping improvements. ",3.2.2,24,2,PcaReportDataItem
+40169633,526963,323b_grade_changes,"[""Other"", ""curb-cuts or at grade entrances""]",3.2.3,4,3,PcaReportDataItem
+40164631,526963,24o_document_review14,"Roof Maintenance agreement
+Water leak repair proposals
+Hardscape and pavement proposal",2.4,14,62,PcaReportDataItem
+40167530,526963,322k_evidence_pkg_sp_count,"[""Based on a physical count""]",3.2.2,17,2,PcaReportDataItem
+40179615,526963,327p_wall_additional_desc,"Two solid waste dumpster enclosures were present in the west elevation loading dock area. The refuse enclosures were, built onto the structure and were constructed of cast in place concrete with a painted finish, steel framed roof cover and upper level chain-link fencing.  Painted metal gates provided secure access to the enclosures.",3.2.7,3,7,PcaReportDataItem
+40185365,526963,53_3a_pca,no,5.3,1,22,PcaReportDataItem
+40187084,526963,553aa_oscond,Good,5.5.3,4,32,PcaReportDataItem
+40169616,526963,are_there_walkways_323,yes,3.2.3,1,3,PcaReportDataItem
+40186968,526963,551f_head,Manufacture stamp was not present,5.5.1,12,32,PcaReportDataItem
+40184385,526963,52p_hvac_system,"[""Packaged units""]",5.2,101,21,PcaReportDataItem
+40185371,526963,pca_reserve_yn_31a,no,1.0,29,63,PcaReportDataItem
+40131076,526963,1a_overall_condition,Good to Poor,1,66,63,PcaReportDataItem
+40169694,526963,325a_retwall,no,3.2.5,1,5,PcaReportDataItem
+40167509,526963,322c_parking,yes,3.2.2,7,2,PcaReportDataItem
+40183023,526963,54a_vertrans,no,5.4,1,23,PcaReportDataItem
+40184401,526963,52k_pu_elec_refridge,R22,5.2,154,21,PcaReportDataItem
+40182848,526963,51_dom_water_sup_desc,Domestic water service to the building was provided in the east elevation landscape area via a two inch copper line.,5.1,16,20,PcaReportDataItem
+40135271,526963,22c_single_knowledge,yes,2.2,8,60,PcaReportDataItem
+40187080,526963,553_1a_pca,no,5.5.3,2,32,PcaReportDataItem
+40187097,526963,63a_supp,no,6.3,1,38,PcaReportDataItem
+40138980,526963,24n_document_review13,Fire Alarm System Annual Inspection Report May 2021 (overdue inspection).,2.4,13,62,PcaReportDataItem
+40181376,526963,42a_vertconst,"[""Precast concrete wall panels, steel columns, steel stud framing""]",4.2,2,13,PcaReportDataItem
+40184570,526963,transformer_location_53ssbs,"in the landscaped area, outside the main electrical room",5.3,2,22,PcaReportDataItem
+40186554,526963,are_sprinkler_heads_present_551,yes,5.5.1,11,32,PcaReportDataItem
+40165312,526963,321c_topo_desc,Gentle slopes were present for drainage purposes to accommodate grade changes where required due to building pad elevations and roadway design.,3.2.1,4,1,PcaReportDataItem
+40169438,526963,322ss_pavemark_survcond,Fair,3.2.2,1,2,PcaReportDataItem
+40181061,526963,41d_foundcond,no,4.1,9,12,PcaReportDataItem
+40181487,526963,roof_framing_42,"[""Low-slope wood beams""]",4.2,4,13,PcaReportDataItem
+40186922,526963,551_1c_pca,no,5.5.1,4,32,PcaReportDataItem
+40165973,526963,321cc_location_of_detention_pond,The detention basin was located at the corner of Pacific Cost Highway and Rose Avenue. The basin construction was not observed.,3.2.1,9,1,PcaReportDataItem
+40169406,526963,pca_reserve_yn_48a,no,1.0,2,63,PcaReportDataItem
+40131080,526963,1c_pre_survey,yes,1,68,63,PcaReportDataItem
+40182612,526963,51b_dompipobs,"[""Copper""]",5.1,1,20,PcaReportDataItem
+40166688,526963,321j_ss_def,"Routine maintenance, including clearing of debris from inlets, channels, piping, and outlets, is anticipated throughout the evaluation period.",3.2.1,16,1,PcaReportDataItem
+40187150,526963,7d2_sign_entrance,yes,7,17,99,PcaReportDataItem
+40187101,526963,64a_tenant,yes,6.4,1,39,PcaReportDataItem
+40167527,526963,322i_van,2,3.2.2,15,2,PcaReportDataItem
+40181489,526963,42c_roofconst,"[""Plywood""]",4.2,5,13,PcaReportDataItem
+40187142,526963,7c6_comp_landing,yes,7,11,99,PcaReportDataItem
+40184414,526963,52_hvac_con_name,GW Richardson,5.2,1,21,PcaReportDataItem
+40182996,526963,51_water_heat_sto_tank_secured,yes,5.1,48,20,PcaReportDataItem
+40180689,526963,328e_survcond,Good,3.2.8,5,8,PcaReportDataItem
+40185889,526963,551c_fsuppwater,"[""Municipal main""]",5.5.1,4,32,PcaReportDataItem
+40187156,526963,7d6_min_clear_space,none,7,25,99,PcaReportDataItem
+40133211,526963,21b_weather,"Partial cloud cover, approximately 50° Fahrenheit",2.1,2,59,PcaReportDataItem
+40180817,526963,3211e,City of Oxnard,3.2.11,5,11,PcaReportDataItem
+40186920,526963,551g_chemical,yes,5.5.1,40,32,PcaReportDataItem
+40187195,526963,93c_special_wind_hurricane,no,9.3,7,58,PcaReportDataItem
+40185893,526963,551ab_backflow_dev_loc,The backflow prevention device for the system was observed in the southeast landscape area .,5.5.1,888,32,PcaReportDataItem
+40182889,526963,51_1a_pca,no,5.1,1,20,PcaReportDataItem
+40186889,526963,551h_suppinsp,February 2023,5.5.1,13,32,PcaReportDataItem
+40131106,526963,1g_recent_capital,no,1,76,63,PcaReportDataItem
+40187126,526963,7b3_access_symbol,yes,7,4,99,PcaReportDataItem
+40131108,526963,1i_eul_statement,no,1.0,9,63,PcaReportDataItem
+40180723,526963,329bb_bt_loc,at the east elevation external break area.,3.2.9,3,9,PcaReportDataItem
+40187134,526963,7c2_curb_cut,yes,7,3,99,PcaReportDataItem
+40169859,526963,324d_survcond,Fair to Poor,3.2.4,3,4,PcaReportDataItem
+40182394,526963,431_1c_pca,no,4.3,1,99,PcaReportDataItem
+40169696,526963,3210a,no,3.2.10,1,10,PcaReportDataItem
+40180818,526963,3211f,The building water meter was located in a below grade vault,3.2.11,6,11,PcaReportDataItem
+40186990,526963,552a_firealrm,yes,5.5.2,46,32,PcaReportDataItem
+40186994,526963,552_1a_pca,no,5.5.2,1,32,PcaReportDataItem
+40179737,526963,pca_reserve_yn_7a,no,1.0,6,63,PcaReportDataItem
+40178190,526963,324m_irrigation_conddesc,Barren turf was observed throughout the site. Testing the irrigation system for proper operation to include as-need repairs is recommended.  An opinion of cost for this work is included in Table 1.,3.2.4,8,4,PcaReportDataItem
+40187141,526963,7c5_length_width,yes,7,9,99,PcaReportDataItem
+40169697,526963,pca_reserve_yn_10a,no,1.0,9,63,PcaReportDataItem
+40187147,526963,74_end_statement,"Exterior routes from public transportation stops, accessible parking spaces, and public sidewalks at the subject property appeared to be generally accessible.",7.0,2,45,PcaReportDataItem
+40165317,526963,pca_reserve_yn_47a,no,1.0,1,63,PcaReportDataItem
+40169416,526963,322a1_pave_type,"[""Concrete""]",3.2.2,1,2,PcaReportDataItem
+40182888,526963,pca_reserve_yn_55a,no,1.0,9,63,PcaReportDataItem
+40183005,526963,pca_reserve_yn_22a,no,1.0,20,63,PcaReportDataItem
+40130742,526963,01w_rm_title,National Client Manager,1,21,63,PcaReportDataItem
+40131100,526963,1e_reported_issues_desc,Recent water intrusion during the last storm coming in from office floor/ceiling window line.,1,70,63,PcaReportDataItem
+40187079,526963,are_there_other_systems_553,yes,5.5.3,1,32,PcaReportDataItem
+40184573,526963,53_2a_pca,no,5.3,1,22,PcaReportDataItem
+40184404,526963,52o_temp_control,"[""Local thermostats""]",5.2,175,21,PcaReportDataItem
+40186938,526963,551r_fire_hydrant_loc,"[""Parking lot perimeters""]",5.5.1,42,32,PcaReportDataItem
+40135594,526963,23e_zoning_findings,"According to a review of the zoning map obtained from City of Oxnard, the subject property is zoned M-L-PD and Limited Manufacturing Industrial Zone. The permitted uses listed in the zoning regulations include industrial and  warehouse.",2.3,18,61,PcaReportDataItem
+40167522,526963,parking_pavement_single_322,Asphalt,3.2.2,12,2,PcaReportDataItem
+40187158,526963,75_end_statement,Exterior entrances provided at the subject property appeared to be generally accessible.,7.0,3,45,PcaReportDataItem
+40166018,526963,321g_precip,no,3.2.1,13,1,PcaReportDataItem
+40184567,526963,53_1a_pca,no,5.3,1,22,PcaReportDataItem
+40186898,526963,fire_extinguisher_location_551,"in corridors, warehouse, and in mechanical/electrical spaces",5.5.1,34,32,PcaReportDataItem
+40183037,526963,52za_is_there_hvac,yes,5.2,1,21,PcaReportDataItem
+40187039,526963,552aa_fa_comp,"[""Pull stations"", ""Alarm horn/strobes"", ""Central panel"", ""Alarm bells""]",5.5.2,1,32,PcaReportDataItem
+40169606,526963,322t_curbing,"[""Concrete""]",3.2.2,27,2,PcaReportDataItem
+40140871,526963,24f_document_review5,"5-Year fire sprinkler test, February 2023. ",2.4,5,62,PcaReportDataItem
+40179598,526963,pca_reserve_yn_6a,no,1.0,5,63,PcaReportDataItem
+40186934,526963,551_chemfiresup_survcond,Good,5.5.1,99,32,PcaReportDataItem
+40184569,526963,53a_transf,Pad-mounted - Single,5.3,1,22,PcaReportDataItem
+40179691,526963,327c_survcond,Good to Fair,3.2.7,4,7,PcaReportDataItem
+40180744,526963,329ca_carport,none,3.2.9,7,9,PcaReportDataItem
+40169688,526963,323c_survcond,Good,3.2.3,6,3,PcaReportDataItem
+40182411,526963,431b_secfac,"[""Other"", ""none""]",4.3.1,2,14,PcaReportDataItem
+40182884,526963,51aa_cond,Good to Fair,5.1,18,20,PcaReportDataItem
+40180806,526963,3211d,N/A (there is plumbing for gas located at the north elevation wall),3.2.11,4,11,PcaReportDataItem
+40169690,526963,pca_reserve_yn_3a,no,1.0,2,63,PcaReportDataItem
+40187139,526963,7c4_comp_slope,yes,7,7,99,PcaReportDataItem
+40178197,526963,pca_reserve_yn_4a,no,1.0,3,63,PcaReportDataItem
+40169470,526963,pca_reserve_yn_49a,no,1.0,3,63,PcaReportDataItem
+40187042,526963,552c_panel,yes,5.5.2,48,32,PcaReportDataItem
+40182387,526963,pca_reserve_yn_14a,no,1.0,12,63,PcaReportDataItem
+40165315,526963,321d_survcond,Good,3.2.1,5,1,PcaReportDataItem
+38476714,526963,23a_fire_life_safety_name,Oxnard Fire,2.3,7,61,PcaReportDataItem
+38476716,526963,23b_fire_life_safety_contact,Blair Martin,2.3,8,61,PcaReportDataItem
+38476671,526963,1a_deviation_text,,1.0,1,63,PcaReportDataItem
+38476667,526963,1f_immediate_repair_lang,,1.0,6,63,PcaReportDataItem
+40135527,526963,23e_fire_life_safety_findings,"Inspections frequency was not reported. According to a report from the Oxnard Fire Department, the Fire Alarm at 1401 Steller Drive is overdue for inspection, last renewal date 4/3/21. The inspection should be performed by a licensed company and the test results should be submitted to the City of Oxnard. An opinion of cost for this work is included in Table 1. ",2.3,12,61,PcaReportDataItem
+38476628,526963,doc_1i_summary_cool_5,,1,999,63,PcaReportDataItem
+38476647,526963,01n_client_address,5150 Overland Avenue,1,12,63,PcaReportDataItem
+38476555,526963,61m_cost_action_item,,6.1,99,36,PcaReportDataItem
+38476542,526963,number_of_similar_elevators_5_541,,5.4.1.5,34,23,PcaReportDataItem
+38476648,526963,01o_client_city,Culver City,1,13,63,PcaReportDataItem
+38476663,526963,1b_cover_letter,,1.0,2,63,PcaReportDataItem
+38476687,526963,1f_priority90_repair_lang,,1,99,63,PcaReportDataItem
+38476563,526963,653q_cost_table_type,,6.5.3,34,41,PcaReportDataItem
+38476509,526963,51m_cost_action_item,,5.1,50,20,PcaReportDataItem
+38476501,526963,44m_cost_action_item,,4.4.1,27,17,PcaReportDataItem
+38476510,526963,52p_cost_table_type,,5.2,1,21,PcaReportDataItem
+38476570,526963,21a_site_visit_date,"March 22, 2023",2.1,1,59,PcaReportDataItem
+38476532,526963,number_of_similar_elevators_541_rep,,5.4.1,34,23,PcaReportDataItem
+38476622,526963,doc_1c_summary_heat_3,,1,999,63,PcaReportDataItem
+38476463,526963,321m_cost_action_item,,3.2.1,18,1,PcaReportDataItem
+38476495,526963,432x_cost_action_item,,4.3.2,19,14,PcaReportDataItem
+38476488,526963,41m_cost_action_item,,4.1,21,12,PcaReportDataItem
+38476613,526963,1u_summary_elev_3,,1,60,63,PcaReportDataItem
+38476547,526963,551_ext_cost_table_type,,5.5.1,38,32,PcaReportDataItem
+38476567,526963,655t_cost_table_type,,6.5.5,47,43,PcaReportDataItem
+38476565,526963,654r_cost_action_item,,6.5.4,39,42,PcaReportDataItem
+38476494,526963,432w_cost_table_type,,4.3.2,18,14,PcaReportDataItem
+38476533,526963,54m_cost_action_item,,5.4.1,99,23,PcaReportDataItem
+38476683,526963,01_confidential_and_privileged,,1.0,99,63,PcaReportDataItem
+38476499,526963,441b_prim_cost_action_item,,4.4.1,18,17,PcaReportDataItem
+38476469,526963,324m_cost_action_item,,3.2.4,10,4,PcaReportDataItem
+38476673,526963,1c_deviation_text,,1.0,3,63,PcaReportDataItem
+38476661,526963,1a_cover_letter,,1.0,1,63,PcaReportDataItem
+38476539,526963,elevator_type_4_541,,5.4.1.4,22,23,PcaReportDataItem
+38476681,526963,9s_hazard,,1.0,19,63,PcaReportDataItem
+38476474,526963,327p_cost_table_type,,3.2.7,10,7,PcaReportDataItem
+38476490,526963,42p_cost_table_type,,4.2,16,13,PcaReportDataItem
+38476684,526963,1_4n_reliance,,1.0,14,63,PcaReportDataItem
+38476589,526963,2h_summary_residential_units_comment,,1,38,63,PcaReportDataItem
+38476496,526963,433y_cost_table_type,,4.3.3,35,15,PcaReportDataItem
+38476573,526963,2d_summary_building_num_comment,,1,26,63,PcaReportDataItem
+38476513,526963,52e_pu_ctt,,5.2,4,21,PcaReportDataItem
+38476507,526963,45p_cost_table_type,,4.5,12,19,PcaReportDataItem
+38476620,526963,1r_summary_cool,,1,999,63,PcaReportDataItem
+38476476,526963,328p_cost_table_type,,3.2.8,7,8,PcaReportDataItem
+38476470,526963,325m_cost_action_item,,3.2.5,6,5,PcaReportDataItem
+38476562,526963,64p_cost_table_type,,6.4,99,39,PcaReportDataItem
+38476617,526963,1w_summary_fire_sup,,1,64,63,PcaReportDataItem
+38476487,526963,3212b_cost_table_type,,3.2.12,28,11,PcaReportDataItem
+38476636,526963,01a_project_name,"O940 Oxnard-Rose Holdings, LLC - Commercial",1,1,63,PcaReportDataItem
+38476506,526963,45m_cost_action_item,,4.5,11,19,PcaReportDataItem
+40259780,526963,443_skylight_condition,Fair to Poor,4.4.3,6,17,PcaReportDataItem
+40230804,526963,454_1i_pca,no,4.5,1,19,PcaReportDataItem
+40259950,526963,441_1p_pca,no,4.4,1,17,PcaReportDataItem
+40226773,526963,431p_sealant_conddesc,The concrete wall panel joint calking was observed to be worn and cracked throughout the structure. Replacement of the wall panel joint calking is recommended. An opinion of cost for this work is included in Table 1.,4.3.1,10,14,PcaReportDataItem
+40261991,526963,441f_rfconddesc,"The low slope roof was in poor condition. The cap sheet had lost a considerable amount of the granules, was cracked and worn at varying locations throughout. Additionally, the roof was reported to have leaks through its surface and is suspected to be one of the main contributing factors to the water infiltrations along the east and south walls. Roof replacement or TPO overlay is recommended (including installation of parapet coping). 
+
+Due to the mounted equipment on the roof and areas of the parapet being below 42"" in height, it is recommended that a yellow safety strip be painted along the roof's perimeter, three feet from the parapet wall.
+
+ An opinion of cost for this work is included in Table 1.",4.4.1,16,17,PcaReportDataItem
+40231575,526963,45h_fbscond,Good,4.5,9,19,PcaReportDataItem
+40230106,526963,433cp_oh_door_loc,at the rear west elevation of the building,4.3.3,30,15,PcaReportDataItem
+40226690,526963,431m_facade_pt_conddesc,"Exterior paint was chipping at various points along the perimeter walls and what appears to be graffiti coverup was located along the south elevation wall.  A complete repaint of the exterior is recommended. If graffiti is an ongoing issue, painting with a graffiti resistant paint is recommended.  An opinion of cost for this work is included in Table 1.",4.3.1,8,14,PcaReportDataItem
+40263185,526963,442p_drain_conddesc,"The drain covers and roofing material was worn and cracked and vegetation was growing in  the drains at the southeast and northwest elevation drains. Clearing the drains and as-needed replace of the drains  during the roof replacement process is recommended. 
+A roof maintenance program has just been implemented , which includes cleaning of the roof. It is recommended that the roof maintenance company be contacted to complete the cleaning of the drains.
+Additionally once the roof has been replaced, it is recommended that the roof maintenance agreement be amended to comply to the new roofs manufacturers requirements. A zero cost will be listed on Table 1 for reference.",4.4.2,33,17,PcaReportDataItem
+40218923,526963,8g_can_lang_2,No suspect microbial growth but areas of water damage,8,9,99,PcaReportDataItem
+40218921,526963,8a_microbial_and_water,No suspect microbial growth but areas of water damage,8.0,6,54,PcaReportDataItem
+40227405,526963,pca_reserve_yn_16a,no,1.0,14,63,PcaReportDataItem
+40227407,526963,433a_primdoors,"[""Painted metal"", ""Single aluminum storefront with full-height glazing""]",4.3.3,24,15,PcaReportDataItem
+40259354,526963,441c_parapet_cond,Fair to Poor,4.4.1,3,17,PcaReportDataItem
+40218922,526963,8f_can_lang_1,No suspect microbial growth but areas of water damage,8,8,99,PcaReportDataItem
+40230810,526963,453_1h_pca,no,4.5,1,19,PcaReportDataItem
+40230791,526963,45p_fireescapes_stairs_balconies,yes,4.5,2,19,PcaReportDataItem
+40226664,526963,pca_reserve_yn_52a,no,1.0,6,63,PcaReportDataItem
+40261882,526963,441_was_roof_access_provided,yes,4.4.1,8,17,PcaReportDataItem
+40131078,526963,1b_overall_preventative_maintenance,Good to Poor,1,67,63,PcaReportDataItem
+40187154,526963,7d4_hardware_comp,yes,7,21,99,PcaReportDataItem
+40186936,526963,551_fire_hydrants,yes,5.5.1,99,32,PcaReportDataItem
+40182989,526963,51_site_seismic_zones,yes,5.1,47,20,PcaReportDataItem
+40185863,526963,551_1a_pca,no,5.5.1,1,32,PcaReportDataItem
+40187155,526963,7d5_clear_open_width,yes,7,23,99,PcaReportDataItem
+40187133,526963,7c1_access_route,yes,7,1,99,PcaReportDataItem
+40185354,526963,53b_eserv,1200,5.3,3,22,PcaReportDataItem
+40186553,526963,551f_piping,"[""Steel""]",5.5.1,1,32,PcaReportDataItem
+40187048,526963,552d_panelloc,in the utility closet at the west elevation,5.5.2,49,32,PcaReportDataItem
+40167511,526963,parking_areas_provided,no,3.2.2,8,2,PcaReportDataItem
+40186550,526963,551e_hose,no,5.5.1,10,32,PcaReportDataItem
+40179868,526963,328b_ext_light_type,"[""Facade-mounted"", ""Fixtures mounted to underside of parking garage""]",3.2.8,2,8,PcaReportDataItem
+40187131,526963,73_end_statement,The accessible parking spaces appeared to be correctly configured and identified.,7.0,1,45,PcaReportDataItem
+40182413,526963,431_is_siding_painted_in_the_field,yes,4.3.1,3,14,PcaReportDataItem
+40140891,526963,24k_document_review10,Capital Improvements listing,2.4,10,62,PcaReportDataItem
+40167507,526963,signalization,no,3.2.2,3,2,PcaReportDataItem
+40186944,526963,pca_reserve_yn_33a,no,1.0,31,63,PcaReportDataItem
+40187104,526963,64ad_tenantresp,yes,6.4,7,39,PcaReportDataItem
+40138945,526963,24d_document_review3,City of Oxnard on-line building code violation database: https://www.oxnard.org/city-department/city-clerk/,2.4,3,62,PcaReportDataItem
+40135245,526963,21k_field_escort_ln,Aquirre,2.2,3,60,PcaReportDataItem
+40165320,526963,321c_storm_water_drainage_type,"[""Sheet flow"", ""Concrete swales""]",3.2.1,8,1,PcaReportDataItem
+40180687,526963,328f_ext_light_surveytime,yes,3.2.8,5,8,PcaReportDataItem
+40180749,526963,spa_329,none,3.2.9,33,9,PcaReportDataItem
+39878821,526963,31ea_num_parcel,1,3.1,1,0,PcaReportDataItem
+39880001,526963,31ec_acreage_source,(per the Ventura County tax assessor),3.1,4,0,PcaReportDataItem
+38756803,526963,431d_wallcond,Fair to Poor,4.3.1,5,14,PcaReportDataItem
+38756804,526963,describe_facade_issues_in_complete_sentences_43,"There was reported and observed water intrusion along the east elevation central and southeast walls, and the southern walls, near the fire riser. The east walls intrusion were mainly at the window areas. There were cracks on the walls where the water intrusion was located. The central east wall intrusion was at both the grade level and the upper mezzanine level. The southeast and south elevation intrusion was at grade level. Repair of the damage areas to include windows sealant replacement (if required), is recommended. An opinion of cost for this work is included in Table 1.
+
+There was past water intrusion issues at the central east window elevation that was repaired in June 2022. The repair included adding a French drain under the window, to prevent the surface water to backup against the wall. There was no report or indicator that theses repairs are conditions contributing to the current issues.
+
+",4.3.1,6,14,PcaReportDataItem
+38476566,526963,654e_cost_table_type,,6.5.4,40,42,PcaReportDataItem
+38476468,526963,324p_cost_table_type,,3.2.4,9,4,PcaReportDataItem
+38476544,526963,542x_cost_action_item,,5.4.2,99,23,PcaReportDataItem
+38476550,526963,551_hydrant_cost_table_type,,5.5.1,777,32,PcaReportDataItem
+38476503,526963,442x_cost_action_item,,4.4.2,38,17,PcaReportDataItem
+38476482,526963,3211p_cost_table_type,,3.2.11,14,11,PcaReportDataItem
+38476535,526963,elevator_type_2_541,,5.4.1.2,8,23,PcaReportDataItem
+38476479,526963,329m_cost_action_item,,3.2.9,60,9,PcaReportDataItem
+38476718,526963,23a_zoning_name,Online Records Request,2.3,13,61,PcaReportDataItem
+38476537,526963,elevator_type_3_541,,5.4.1.3,15,23,PcaReportDataItem
+38476599,526963,1n_summary_secfac,,1,46,63,PcaReportDataItem
+38476690,526963,1g_routine_repair_maintenace,,1,99,63,PcaReportDataItem
+38476498,526963,441a_prim_cost_table_type,,4.4.1,17,17,PcaReportDataItem
+38476693,526963,8_1_moisture_microbial_growth,,8,99,99,PcaReportDataItem
+38476593,526963,1jj_summary_hori_cons,,1,42,63,PcaReportDataItem
+38476528,526963,elevator_type_541,,5.4.1,2,23,PcaReportDataItem
+39341300,526963,23c_building_code_phone,https://www.oxnard.org/city-department/city-clerk/,2.3,3,61,PcaReportDataItem
+38756780,526963,1f_capital_improvements,yes,1,75,63,PcaReportDataItem
+39341307,526963,23c_fire_life_safety_phone,https://www.oxnard.org/city-department/city-clerk/,2.3,9,61,PcaReportDataItem
+38476594,526963,2i_summary_guestrooms_comment,,1,42,63,PcaReportDataItem
+38476637,526963,01f_project_number,22-392561.27,1,2,63,PcaReportDataItem
+39341303,526963,23c_zoning_phone,https://www.oxnard.org/city-department/city-clerk/,2.3,15,61,PcaReportDataItem
+38756781,526963,1i_planned_capital,yes,1,97,63,PcaReportDataItem
+38756791,526963,1j_planned_capital_desc,"Asphalt repair - $25,000, 2023. ",1,98,63,PcaReportDataItem
+38476601,526963,1o_summary_primroof1,"Flat, built-up roofing with granular-surfaced modified bitumen cap sheet",1,47,63,PcaReportDataItem
+38476618,526963,1x_summary_alarm,Central system with local notification,1,65,63,PcaReportDataItem
+40182373,526963,42e_structcond,yes,4.2,6,13,PcaReportDataItem
+40133209,526963,1m_additional_investigations,yes,1,131,63,PcaReportDataItem
+41240099,526963,describe_structural_issues_in_complete_sentences_42,Foil insulation was noted at the roof structure: this should be inspected for structural damage (rust of subpurlin hangers) and cut back to allow for air movement/drainage of any condensation. ,4.2,7,13,PcaReportDataItem
