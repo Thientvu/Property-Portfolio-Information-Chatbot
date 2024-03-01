@@ -1,4 +1,5 @@
 pandas==1.3.3
+notebook
 jupyterlab
 openai
 langchain
@@ -6,3 +7,4 @@ langchain-openai
 langsmith
 chromadb
 lark
+streamlit
