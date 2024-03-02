@@ -29,15 +29,12 @@ class ChatBot:
         template = """Use the following pieces of context to answer the question at the end. 
         If you don't know the answer, just say that you don't know, don't try to make up an answer. 
         Provide a thorough explanation of your reasoning, using bullet points for clarity where needed.
-        Conclude each response with 'Thank you for asking, Is there anything else I can help you with?' placed 1 line after the answer.
 
         {context}
 
         Return the output in the following format: 
         Question: {question}
         Answer:
-
-        Thank you for asking, Is there anything else I can help you with?
         """
         QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"],template=template,)
         qa = ConversationalRetrievalChain.from_llm(
