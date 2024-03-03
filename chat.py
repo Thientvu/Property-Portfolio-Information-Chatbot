@@ -1,78 +1,48 @@
 import os
 import openai
-import argparse
 from datetime import datetime
+from dotenv import load_dotenv, find_dotenv
+from update import createVector
 
-# https://platform.openai.com/docs/api-reference/chat/create?lang=python
-# https://platform.openai.com/docs/guides/chat/introduction
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
+from langchain.vectorstores import Chroma
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain.prompts import PromptTemplate
 
-openai.api_key = ""
+class ChatBot:
+    def __init__(self, user_file):
+        self.user_file = user_file
+        self.userdb = createVector(user_file)
 
-def arguments():
-  parser = argparse.ArgumentParser(description = 'GPT-4 thin command line API wrapper.')
+        _ = load_dotenv(find_dotenv()) # read local .env file
+        self.openai.api_key  = os.environ['OPENAI_API_KEY']
+        self.llm_name = 'gpt-4-turbo-preview'
+        self.llm = ChatOpenAI(model_name = self.llm_name, temperature = 0)
+        self.memory = ConversationBufferMemory(
+            memory_key="chat_history",
+            return_messages=True
+        )
 
-  parser.add_argument('--mode', choices = ['manual', 'file'], default = 'file',
-    help = 'choose to give your first prompt by either using terminal(0) or input text file(1)')
-  
-  parser.add_argument('--system', type = str, default = "system.txt",
-    help = 'content in system role, use for initialize assistant charactistic')
+    def getRespond(self, messages) -> str:
+        template = """Use the following pieces of context to answer the question at the end. 
+        If you don't know the answer, just say that you don't know, don't try to make up an answer. 
+        Provide a thorough explanation of your reasoning, using bullet points for clarity where needed.
 
-  parser.add_argument('--prompt', type = str, default = "prompt.txt",
-    help = 'content in user role, use for ask questions')
-  
-  parser.add_argument('--response', type = str, default = "np-response.txt",
-    help = 'content in assistant role, use for record responses')
+        {context}
 
-  args = parser.parse_args()
-  return args
-
-def get_file_content(name: str) -> str:
-  file = open(name, 'r', encoding = 'utf-8', errors='ignore')
-  return file.read()
-
-def get_respond(messages) -> str:
-  completion = openai.ChatCompletion.create(
-    model="gpt-4",
-    messages=messages, 
-  )
-
-  return completion['choices'][0]['message']['content']
-
-def call_gpt():
-  currentTime = datetime.now()
-  outputFileName = currentTime.strftime("%y%m%d%H%M%S-") + args.response
-  out = open(outputFileName, 'w', encoding = 'utf-8', errors='ignore')
-  user_contents = []
-  assistant_responses = []
-
-  system_content = get_file_content(args.system)
-  if args.mode == 'file':
-    user_content = get_file_content(args.prompt)
-    print(f'Human: {user_content}')
-  else:
-    user_content = input('Human: ')  
-  user_contents.append(user_content)
-
-  while True:
-    out.write("Human:\n" + user_content + "\n\n")
-    messages = [{"role": "system", "content": system_content}]
-    messages = []
-    for i in range(len(assistant_responses)):
-      messages.append({"role": "user", "content": user_contents[i]})
-      messages.append({"role": "assistant", "content": assistant_responses[i]})
-
-    messages.append({"role": "user", "content": user_contents[len(user_contents) - 1]})
-
-    response = get_respond(messages)
-    print('AI:', response)
-    out.write("AI:\n" + response + "\n\n")
-    assistant_responses.append(response)
-
-    user_content = input('Human: ')
-    if user_content == 'exit':
-      break
-    user_contents.append(user_content)
-      
-if __name__ == '__main__':
-  args = arguments()
-  call_gpt()
+        Return the output in the following format: 
+        Question: {question}
+        Answer:
+        """
+        QA_CHAIN_PROMPT = PromptTemplate(input_variables=["context", "question"],template=template,)
+        qa = ConversationalRetrievalChain.from_llm(
+            self.llm,
+            retriever=self.userdb.as_retriever(search_type="similarity", search_kwargs={"k": 3}),
+            memory=self.memory,
+            verbose = True,
+            combine_docs_chain_kwargs={'prompt': QA_CHAIN_PROMPT}
+)
+        result = qa({"question": messages})
+        return result['answer']
