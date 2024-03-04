@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 
+
 class ChatHistory:
     def __init__(self, filename="chat_history.json"):
         self.filename = filename
@@ -16,8 +17,10 @@ class ChatHistory:
             history = [json.loads(line) for line in file]
         return history
 
+
 # Example usage
-chat_history = ChatHistory()
-chat_history.log_message("Hello, how can I help you?", "chatbot")
-chat_history.log_message("I need some assistance.", "user")
-print(chat_history.retrieve_history())
+if __name__ == "__main__":
+    chat_history = ChatHistory()
+    chat_history.log_message("Hello, how can I help you?", "chatbot")
+    chat_history.log_message("I need some assistance.", "user")
+    print(chat_history.retrieve_history())
