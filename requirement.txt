@@ -4,6 +4,7 @@ jupyterlab
 openai
 langchain
 langchain-openai
+langchain_community
 langsmith
 chromadb
 lark
