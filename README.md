@@ -37,6 +37,12 @@ jupyter notebook
 
 See if all the code block can run or not.
 
+## Run demo
+To run demo, make sure you are in the environment and the repo directory, and run:
+```
+streamlit run app.py 
+```
+
 ## Issue
 C:\Users\11096\anaconda3\envs\partner-esi\lib\site-packages\langchain_core\_api\deprecation.py:117: LangChainDeprecationWarning: The function `__call__` was deprecated in LangChain 0.1.0 and will be removed in 0.2.0. Use invoke instead.
   warn_deprecated(
