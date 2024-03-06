@@ -7,11 +7,11 @@ FILE = 'dat/526963_processed_data.csv'
 def main():
     # Initialize frequently asked question
     faq_questions = [
-        "What is the client info of the report?", 
-        "Who is the client's name?",
+        "What is the client information in the report?", 
+        "what is the name of the client mentioned in the report?",
         # "What is the REVIEWER INFO of the report?",
-        # "What is the overview of the property?",
-        "What is the total cost in 10 years?"
+        "What is an overview of the overall condition of the building?",
+        "What is the total reported costs for maintaining the building?"
     ]
 
     # Initialize chat history
