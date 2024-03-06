@@ -20,27 +20,27 @@ class ChatBot:
         self.llm = ChatOpenAI(model_name = self.llm_name, openai_api_key = self.openai_api_key, temperature = 0)
 
         self.template = """
-        Based on the chat history and context provided, Do your best to answer the question.
-        If the answer is uncertain, return 'I'm not sure, please contact our representative'. It's important not to make up an answer.
-        Reason before answer. Keep the answer straighforward and concise.
-        If the question involves calculations, outline the step-by-step process to derive the results.
-        After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
-
+        Instructions:
+        1. Reason before answering.
+        2. Keep the answer truthful and concise.
+        3. If uncertain, respond with "I'm not sure, please contact our representative."
+        4. If the question involves calculations, outline the step-by-step process to derive the results.
+        5. Format the answer to be readable.
+        6. After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
         Question:
         {question}
-
         Chat History:
         {chat_history}
-
         Context:
         {context}
         """
 
-        self.QA_CHAIN_PROMPT = PromptTemplate(input_variables=['question'], template=self.template)
+        self.QA_CHAIN_PROMPT = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=self.template)
 
         self.qa = ConversationalRetrievalChain.from_llm(
             self.llm,
-            retriever=self.userdb.as_retriever(search_type="similarity", search_kwargs={"k": 3}),
+            retriever=self.userdb.as_retriever(search_type="similarity", search_kwargs={"k": 4}),
+            chain_type = 'stuff', 
             memory=memory,
             verbose = True,
             combine_docs_chain_kwargs={'prompt': self.QA_CHAIN_PROMPT}

@@ -5,7 +5,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 
-def createVector(csv_dir: str, chunk_size=1000, chunk_overlap=20) -> Chroma:
+def createVector(csv_dir: str, chunk_size=2000, chunk_overlap=20) -> Chroma:
     """
     This function takes in a directory of csv files, chunk_size for text splitting, and an embedding for  vectorbase storage. 
     Assume only csv files in the directory
