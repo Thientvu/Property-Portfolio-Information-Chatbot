@@ -3,12 +3,18 @@ import numpy as np
 from pathlib import Path
 
 class Preprocess:
-    def __init__(self, cols_path, cols2_path, cost_table_path, pca_data_items_path, projects_id_path, output_dir):
-        self.cols_path = cols_path
-        self.cols2_path = cols2_path
-        self.cost_table_path = cost_table_path
-        self.pca_data_items_path = pca_data_items_path
-        self.projects_id_path = projects_id_path
+    def __init__(self, portfolio_id, cols_path, cols2_path, cost_table_path, pca_data_items_path, projects_id_path, output_dir):
+        self.cols = pd.read_pickle(cols_path)
+        self.cols2 = pd.read_pickle(cols2_path)
+        self.cost_table_db = pd.read_csv(cost_table_path, dtype= {'id':str, 'project_id':str, 'document_spot':str, 'section_reference':str, })
+        self.pca_data_items_db = pd.read_csv(pca_data_items_path,
+                         dtype={'a_column': str, 'id': str, 'a_column': str, 'project_id': str}
+                         # , parse_dates=['created_at','updated_at'] # Omitting this because the table we were
+                         # given don't have created_at or updated_at
+                         )
+        self.projects_id_db = pd.read_csv(projects_id_path, dtype={'id': str})['id'].unique().tolist()
+        self.projects_id_w_portfolio_id = pd.read_csv(projects_id_path, dtype={'id': str, 'portfolio_id': str})
+        self.portfolio_id = portfolio_id
         self.output_dir = output_dir
         self.processed_data = None
 
@@ -18,15 +24,9 @@ class Preprocess:
         a file path of the column references. If possible, calculate the total
         cost of each project and save in pandas DataFrame object.
         """
-        file_path = self.cost_table_path
-        projects_path = self.projects_id_path
-        project_id_lst = pd.read_csv(projects_path, dtype={'id': str})['id'].unique().tolist()
+        project_id_lst =self.projects_id_db
 
-        ts = pd.read_csv(file_path,
-                         dtype={'a_column': str, 'id': str, 'a_column': str, 'project_id': str}
-                         # , parse_dates=['created_at','updated_at'] # Omitting this because the table we were
-                         # given don't have created_at or updated_at
-                         )
+        ts = self.cost_table_db
 
         ts = ts[ts['project_id'].isin(project_id_lst)]
         ts_st = ts[ts['name'] == 'Short-term'].copy()
@@ -115,13 +115,10 @@ class Preprocess:
         a file path of the column references. Then, it processes the pca items. 
         It save in pandas DataFrame object.
         """
-        cols_path = self.cols_path
-        projects_path = self.projects_id_path
-        file_path = self.pca_data_items_path
         # read file paths
-        project_id_lst = pd.read_csv(projects_path, dtype={'id': str})['id'].unique().tolist()
-        cols = pd.read_pickle(cols_path)
-        pca_items = pd.read_csv(file_path, dtype= {'id':str, 'project_id':str, 'document_spot':str, 'section_reference':str, })
+        project_id_lst = self.projects_id_db
+        cols = self.cols
+        pca_items = self.pca_data_items_db
 
         # get specific columns and projects based off of cols_path
         pca_items = pca_items[pca_items['document_spot'].isin(cols['source'].tolist()) & pca_items['project_id'].isin(project_id_lst)]
@@ -165,6 +162,17 @@ class Preprocess:
         pca_items_gb['cost_related'] = False
 
         return pca_items_gb
+    
+    def clear_data(self):
+        """
+        With the final dataframe, check all projects that is not belong to portfolio_id, remove them
+        """
+        belongs_to_portfolio_id = []
+        for element in self.projects_id_w_portfolio_id.itertuples():
+            if element.portfolio_id == self.portfolio_id:
+                belongs_to_portfolio_id.append(element.id)
+        
+        return belongs_to_portfolio_id
 
     def get_csv(self):
         """
@@ -178,12 +186,17 @@ class Preprocess:
         # Append example_df to empty_df
         final_df = pd.concat([cost_table, pca_data_items], ignore_index=True)
 
+        # Create output directory if it does not exist
+        Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+        id_lst = self.clear_data()
+        print(id_lst)
+
         # Write final_df to a csv file
-        for project_id in final_df['project_id'].unique():
+        for project_id in id_lst:
             final_df[final_df['project_id'] == project_id].to_csv(Path(self.output_dir, f'{project_id}_processed_data.csv'), index=False)
 
         return final_df
 
 if __name__ == '__main__':
-    myData = Preprocess('preprocessing-script/col_reference.pkl', 'preprocessing-script/col_reference2.pkl', 'dat/raw-2/chatbot_cost_tables_ts.csv', 'dat/raw-2/chatbot_pca_data_items.csv', 'dat/raw-2/chatbot_projects.csv', 'output')
+    myData = Preprocess('539', 'preprocessing-script/col_reference.pkl', 'preprocessing-script/cols2.pkl', 'dat/raw-2/chatbot_cost_tables_ts.csv', 'dat/raw-2/chatbot_pca_data_items.csv', 'dat/raw-2/chatbot_projects.csv', 'output')
     print(myData.get_csv())
