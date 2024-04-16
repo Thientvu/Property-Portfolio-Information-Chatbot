@@ -12,12 +12,14 @@ class Preprocess:
         self.output_dir = output_dir
         self.processed_data = None
 
-    def cost_table(self, file_path: str, projects_path: str) -> pd.DataFrame:
+    def cost_table(self) -> pd.DataFrame:
         """
         This function takes in a file path as a string of the costs and
         a file path of the column references. If possible, calculate the total
         cost of each project and save in pandas DataFrame object.
         """
+        file_path = self.cost_table_path
+        projects_path = self.projects_id_path
         project_id_lst = pd.read_csv(projects_path, dtype={'id': str})['id'].unique().tolist()
 
         ts = pd.read_csv(file_path,
@@ -113,11 +115,16 @@ class Preprocess:
         a file path of the column references. Then, it processes the pca items. 
         It save in pandas DataFrame object.
         """
-        cols = pd.read_pickle(self.cols_path)
-        pca_items = pd.read_csv(self.pca_data_items_path, dtype= {'id':str, 'project_id':str, 'document_spot':str, 'section_reference':str, })
+        cols_path = self.cols_path
+        projects_path = self.projects_id_path
+        file_path = self.pca_data_items_path
+        # read file paths
+        project_id_lst = pd.read_csv(projects_path, dtype={'id': str})['id'].unique().tolist()
+        cols = pd.read_pickle(cols_path)
+        pca_items = pd.read_csv(file_path, dtype= {'id':str, 'project_id':str, 'document_spot':str, 'section_reference':str, })
 
         # get specific columns and projects based off of cols_path
-        pca_items = pca_items[pca_items['document_spot'].isin(cols['source'].tolist()) & pca_items['project_id'].isin(self.projects_id_path)]
+        pca_items = pca_items[pca_items['document_spot'].isin(cols['source'].tolist()) & pca_items['project_id'].isin(project_id_lst)]
 
         # create a new document_data column where document_text is null (then include the_data and document_text)
         pca_items['document_data'] = np.where(pca_items['document_text'].isnull(), pca_items['the_data'], pca_items['document_text'])
@@ -175,5 +182,8 @@ class Preprocess:
         for project_id in final_df['project_id'].unique():
             final_df[final_df['project_id'] == project_id].to_csv(Path(self.output_dir, f'{project_id}_processed_data.csv'), index=False)
 
+        return final_df
+
 if __name__ == '__main__':
-    pass
+    myData = Preprocess('preprocessing-script/col_reference.pkl', 'preprocessing-script/col_reference2.pkl', 'dat/raw-2/chatbot_cost_tables_ts.csv', 'dat/raw-2/chatbot_pca_data_items.csv', 'dat/raw-2/chatbot_projects.csv', 'output')
+    print(myData.get_csv())
