@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import codecs
 from preprocess import Preprocess
 from dotenv import load_dotenv, find_dotenv
 from vectordb import createVector
@@ -18,8 +19,20 @@ class ChatBot:
             directory_paths[4], 
             directory_paths[5])
         self.user_file_path = self.user_dat.get_merged_csv()
+        new_file = 'dat/working.csv'
 
-        self.userdb = createVector(self.user_file_path)
+        # Open the original file with an encoding that's likely to support the problematic characters
+        with codecs.open(self.user_file_path, 'r', encoding='latin-1', errors='replace') as file:
+            # Open the new file where the cleaned content will be stored
+            with codecs.open(new_file, 'w', encoding='utf-8') as cleaned_file:
+                for line in file:
+                    # Write each line to the new file in UTF-8 encoding
+                    cleaned_file.write(line)
+
+        self.userdb = createVector(new_file)
+
+        # self.user_file_path = 'dat/working.csv'
+        # self.userdb = createVector(self.user_file_path)
     
         _ = load_dotenv(find_dotenv()) # read local .env file
         self.openai_api_key  = os.environ['OPENAI_API_KEY']
