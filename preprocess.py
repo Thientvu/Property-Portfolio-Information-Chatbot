@@ -167,12 +167,8 @@ class Preprocess:
         """
         With the final dataframe, check all projects that is not belong to portfolio_id, remove them
         """
-        belongs_to_portfolio_id = []
-        for element in self.projects_id_w_portfolio_id.itertuples():
-            if element.portfolio_id == self.portfolio_id:
-                belongs_to_portfolio_id.append(element.id)
-        
-        return belongs_to_portfolio_id
+        portfolio_projects = self.projects_id_w_portfolio_id[self.projects_id_w_portfolio_id['portfolio_id'] == self.portfolio_id]
+        return portfolio_projects['id'].tolist()
 
     def get_csv(self):
         """
