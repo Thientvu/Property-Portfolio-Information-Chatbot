@@ -107,7 +107,6 @@ class Preprocess:
         ts_lt_union['cost_related'] = True
 
         return ts_lt_union
-        pass
     
     def pca_data_items(self) -> pd.DataFrame:
         """
@@ -193,6 +192,27 @@ class Preprocess:
             final_df[final_df['project_id'] == project_id].to_csv(Path(self.output_dir, f'{project_id}_processed_data.csv'), index=False)
 
         return project_count
+    
+    def get_merged_csv(self):
+        """
+        This function returns the processed data as a whole.
+        """
+        # Create a DataFrame from example_data
+        cost_table = self.cost_table()
+        pca_data_items = self.pca_data_items()
+
+        # Append example_df to empty_df
+        final_df = pd.concat([cost_table, pca_data_items], ignore_index=True)
+
+        # Create output directory if it does not exist
+        Path(self.output_dir).mkdir(parents=True, exist_ok=True)
+        id_lst = self.clear_data()
+
+        # Remove projects that are not in the portfolio
+        final_df = final_df[final_df['project_id'].isin(id_lst)]
+        final_df.to_csv(Path(self.output_dir, f'pid_{self.portfolio_id}_processed_data.csv'), index=False)
+        file_path = Path(self.output_dir, f'pid_{self.portfolio_id}_processed_data.csv')
+        return file_path
 
 if __name__ == '__main__':
     myData = Preprocess('539', 'preprocessing-script/col_reference.pkl', 'preprocessing-script/cols2.pkl', 'dat/raw-2/chatbot_cost_tables_ts.csv', 'dat/raw-2/chatbot_pca_data_items.csv', 'dat/raw-2/chatbot_projects.csv', 'output')

@@ -1,5 +1,6 @@
 import os
-import openai
+import pandas as pd
+from preprocess import Preprocess
 from dotenv import load_dotenv, find_dotenv
 from vectordb import createVector
 from langchain_openai import ChatOpenAI
@@ -7,11 +8,19 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
 class ChatBot:
-    def __init__(self, user_file, memory):
-        self. user_file = user_file
+    def __init__(self, portfolio_id, directory_paths, memory):
+        self.user_dat = Preprocess(
+            portfolio_id, 
+            directory_paths[0], 
+            directory_paths[1], 
+            directory_paths[2], 
+            directory_paths[3], 
+            directory_paths[4], 
+            directory_paths[5])
+        self.user_file_path = self.user_dat.get_merged_csv()
 
-        self.userdb = createVector(user_file)
-
+        self.userdb = createVector(self.user_file_path)
+    
         _ = load_dotenv(find_dotenv()) # read local .env file
         self.openai_api_key  = os.environ['OPENAI_API_KEY']
 
