@@ -168,7 +168,7 @@ class Preprocess:
         With the final dataframe, check all projects that is not belong to portfolio_id, remove them
         """
         portfolio_projects = self.projects_id_w_portfolio_id[self.projects_id_w_portfolio_id['portfolio_id'] == self.portfolio_id]
-        return portfolio_projects['id'].tolist()
+        return portfolio_projects['id'].unique().tolist()
 
     def get_csv(self):
         """
@@ -185,13 +185,14 @@ class Preprocess:
         # Create output directory if it does not exist
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         id_lst = self.clear_data()
-        print(id_lst)
 
         # Write final_df to a csv file
+        project_count = 0
         for project_id in id_lst:
+            project_count += 1
             final_df[final_df['project_id'] == project_id].to_csv(Path(self.output_dir, f'{project_id}_processed_data.csv'), index=False)
 
-        return final_df
+        return project_count
 
 if __name__ == '__main__':
     myData = Preprocess('539', 'preprocessing-script/col_reference.pkl', 'preprocessing-script/cols2.pkl', 'dat/raw-2/chatbot_cost_tables_ts.csv', 'dat/raw-2/chatbot_pca_data_items.csv', 'dat/raw-2/chatbot_projects.csv', 'output')
