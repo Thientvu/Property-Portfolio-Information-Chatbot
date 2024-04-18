@@ -2,9 +2,31 @@ import streamlit as st
 from chat import ChatBot    
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
-FILE = 'dat/526963_processed_data.csv'
+FILE = [
+    'preprocessing-script/col_reference.pkl', 
+    'preprocessing-script/cols2.pkl', 
+    'dat/raw-2/chatbot_cost_tables_ts.csv', 
+    'dat/raw-2/chatbot_pca_data_items.csv', 
+    'dat/raw-2/chatbot_projects.csv',
+    'dat/output'
+    ]
+
+def chat(pid):
+    """
+    self.user_dat = Preprocess(
+        portfolio_id, 
+        directory_paths[0], 
+        directory_paths[1], 
+        directory_paths[2], 
+        directory_paths[3], 
+        directory_paths[4], 
+        directory_paths[5])
+    self.user_file_path = self.user_dat.get_merged_csv()
+    """
+    pass
 
 def main():
+    processed_file = 'dat/output/pid_539_processed_data.csv'
     # Initialize frequently asked question
     faq_questions = [
         "What is the client information in the report?", 
@@ -21,7 +43,7 @@ def main():
     if 'buffer_memory' not in st.session_state:
         st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-    chatbot = ChatBot(user_file = FILE, memory = st.session_state.buffer_memory)
+    chatbot = ChatBot(file_path = processed_file, memory = st.session_state.buffer_memory)
 
     st.title("Partner ESI Chatbot")
     # Initialize session state for chat input

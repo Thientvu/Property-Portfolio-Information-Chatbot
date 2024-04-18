@@ -1,17 +1,44 @@
 import os
-import openai
+import pandas as pd
+import codecs
+from preprocess import Preprocess
 from dotenv import load_dotenv, find_dotenv
 from vectordb import createVector
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
+# # Step 1: Detect the encoding of the original CSV file
+# def detect_encoding(file_path):
+#     with open(file_path, 'rb') as f:
+#         raw_data = f.read(10000)  # Read some bytes to guess the encoding
+#         result = chardet.detect(raw_data)
+#         return result['encoding']
+
+# # Step 2: Read the CSV file with the detected encoding
+# def read_csv(file_path, encoding):
+#     data = []
+#     with open(file_path, 'r', encoding=encoding) as f:
+#         reader = csv.reader(f)
+#         for row in reader:
+#             # Here you can process your data if necessary
+#             data.append(row)
+#     return data
+
+# # Step 3: Write the data back to a new CSV file with UTF-8 encoding
+# def write_csv(data, output_file_path):
+#     with open(output_file_path, 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.writer(f)
+#         for row in data:
+#             writer.writerow(row)
+
 class ChatBot:
-    def __init__(self, user_file, memory):
-        self. user_file = user_file
+    def __init__(self, file_path, memory):    
+        self.userdb = createVector(file_path)
 
-        self.userdb = createVector(user_file)
-
+        # self.user_file_path = 'dat/working.csv'
+        # self.userdb = createVector(self.user_file_path)
+    
         _ = load_dotenv(find_dotenv()) # read local .env file
         self.openai_api_key  = os.environ['OPENAI_API_KEY']
 

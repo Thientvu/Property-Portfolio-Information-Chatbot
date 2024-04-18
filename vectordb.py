@@ -15,7 +15,7 @@ def createVector(csv_dir: str, chunk_size=2000, chunk_overlap=20) -> Chroma:
     Used once per portfolio/group
     """
     # load directory of csv files
-    loader = CSVLoader(file_path = csv_dir)
+    loader = CSVLoader(file_path = csv_dir, encoding='utf-8')
     sections = loader.load()
 
     # split documents
