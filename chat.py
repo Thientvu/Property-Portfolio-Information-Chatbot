@@ -1,50 +1,21 @@
 import os
-import pandas as pd
-import codecs
-from preprocess import Preprocess
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 from vectordb import createVector
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
-# # Step 1: Detect the encoding of the original CSV file
-# def detect_encoding(file_path):
-#     with open(file_path, 'rb') as f:
-#         raw_data = f.read(10000)  # Read some bytes to guess the encoding
-#         result = chardet.detect(raw_data)
-#         return result['encoding']
-
-# # Step 2: Read the CSV file with the detected encoding
-# def read_csv(file_path, encoding):
-#     data = []
-#     with open(file_path, 'r', encoding=encoding) as f:
-#         reader = csv.reader(f)
-#         for row in reader:
-#             # Here you can process your data if necessary
-#             data.append(row)
-#     return data
-
-# # Step 3: Write the data back to a new CSV file with UTF-8 encoding
-# def write_csv(data, output_file_path):
-#     with open(output_file_path, 'w', newline='', encoding='utf-8') as f:
-#         writer = csv.writer(f)
-#         for row in data:
-#             writer.writerow(row)
 
 class ChatBot:
-    def __init__(self, file_path, memory):    
-        self.userdb = createVector(file_path)
+    def __init__(self, portfolio_folder, memory):    
+        self.user_db = createVector(portfolio_folder)
+        load_dotenv()  
 
-        # self.user_file_path = 'dat/working.csv'
-        # self.userdb = createVector(self.user_file_path)
-    
-        _ = load_dotenv(find_dotenv()) # read local .env file
-        self.openai_api_key  = os.environ['OPENAI_API_KEY']
+        openai_api_key = os.getenv('OPENAI_API_KEY')
+        if not openai_api_key:
+            raise ValueError("OPENAI_API_KEY is not set in the environment variables.")
 
-        self.llm_name = 'gpt-4-turbo-preview'
-
-        self.llm = ChatOpenAI(model_name = self.llm_name, openai_api_key = self.openai_api_key, temperature = 0)
+        self.llm = ChatOpenAI(model_name='gpt-4-turbo-preview', openai_api_key=openai_api_key, temperature=0)
 
         self.template = """
         Instructions:
@@ -62,18 +33,17 @@ class ChatBot:
         {context}
         """
 
-        self.QA_CHAIN_PROMPT = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=self.template)
+        self.qa_chain_prompt = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=self.template)
 
         self.qa = ConversationalRetrievalChain.from_llm(
             self.llm,
-            retriever=self.userdb.as_retriever(search_type="similarity", search_kwargs={"k": 4}),
-            chain_type = 'stuff', 
+            retriever = self.user_db.as_retriever(search_type="mmr", search_kwargs={"k" : 100}),
+            chain_type='stuff',  
             memory=memory,
-            verbose = True,
-            combine_docs_chain_kwargs={'prompt': self.QA_CHAIN_PROMPT}
+            verbose=True,
+            combine_docs_chain_kwargs={'prompt': self.qa_chain_prompt}
         )
 
-
-    def getRespond(self, messages) -> str:
+    def get_response(self, messages) -> str:
         result = self.qa({"question": messages})
         return result['answer']

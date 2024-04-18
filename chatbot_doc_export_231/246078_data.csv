@@ -1,0 +1,7 @@
+portfolio_id,project_id,section_reference,category,section,subsection,cost_related,docu_txt
+231,246078,1.1,Property Description,GENERAL PROPERTY DATA - EXECUTIVE SUMMARY TABLE,,False,ADA-designated parking count - Property Data is Two
+231,246078,3.1,Property Characteristics,Parcel Configuration,,False,"Acreage is and comprised approximately 2.45 acres., Acreage source is (per the Kane County tax assessor)"
+231,246078,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",False,"ADA (including van spaces) is including two ADA-designated spaces,"
+231,246078,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",,"There is an Single-year event Reserve cost item regarding Asphalt seal coat & striping for total unit of 72000 SF that have 3 years remaining useful life with total cost of 8640.0 dollars, year 3 costs $8640.0, year 8 costs $8640.0."
+231,246078,4.3.1,,,,,"There is an Single-year event Reserve cost item regarding Exterior cleaning, pointing, and panel sealant. for total unit of 1 LS that have 7 years remaining useful life with total cost of 10000.0 dollars, year 7 costs $10000.0."
+231,246078,5.2,Mechanical and Electrical Systems,"Heating, Ventilation, and Air Conditioning (HVAC)",,,"There is an Spread Reserve cost item regarding Replace roof mounted HVAC package units. for total unit of 20 TON that have 5 years remaining useful life with total cost of 24000.0 dollars, year 6 costs $12000.0, year 7 costs $12000.0."

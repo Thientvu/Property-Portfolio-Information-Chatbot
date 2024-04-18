@@ -1,0 +1,6 @@
+portfolio_id,project_id,section_reference,category,section,subsection,cost_related,docu_txt
+231,246038,1.1,Property Description,GENERAL PROPERTY DATA - EXECUTIVE SUMMARY TABLE,,False,ADA-designated parking count - Property Data is Five standard ADA accessible spaces
+231,246038,3.1,Property Characteristics,Parcel Configuration,,False,"Acreage is and comprised approximately 12 acres., Acreage source is (per the Butler County tax assessor)"
+231,246038,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",False,ADA (including van spaces) is five
+231,246038,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",,"There is an Single-year event Reserve cost item regarding Asphalt seal coat & striping for total unit of 75000 SF that have 4 years remaining useful life with total cost of 9000.0 dollars, year 4 costs $9000.0, year 9 costs $9000.0."
+231,246038,4.3.1,,,,,"There is an Single-year event Reserve cost item regarding Exterior cleaning, painting, sealing for total unit of 10000 SF that have 7 years remaining useful life with total cost of 10000.0 dollars, year 7 costs $10000.0."

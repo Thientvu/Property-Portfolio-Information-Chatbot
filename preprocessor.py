@@ -162,9 +162,21 @@ class Preprocessor:
         merge_parts = self.merge_parts()
 
         for project_id in self.project_id_lst:
-            export_df = merge_parts[merge_parts['project_id'] == project_id].iloc[:, 1:]
-            export_df.to_csv(f'{parent_dir}/{project_id}_data.csv',
-                             index=False)
+            # Filter the data for the current project ID
+            export_df = merge_parts[merge_parts['project_id'] == project_id].copy()  # Ensure a copy is made here
+
+            # Use .loc to avoid SettingWithCopyWarning
+            export_df.loc[:, 'portfolio_id'] = self.portfolio_id
+            export_df.loc[:, 'project_id'] = project_id
+            
+            # Define the new column order to make 'portfolio_id' and 'project_id' the first columns
+            columns_order = ['portfolio_id', 'project_id'] + [col for col in export_df.columns if col not in ['portfolio_id', 'project_id']]
+            export_df = export_df[columns_order]
+            
+            # Export to CSV, ensuring 'portfolio_id' and 'project_id' are the first columns
+            export_df.to_csv(f'{parent_dir}/{project_id}_data.csv', index=False)
+
+
 
 if __name__ == '__main__':
     cols = 'preprocessing-script/col_reference.pkl'

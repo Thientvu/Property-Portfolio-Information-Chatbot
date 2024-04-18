@@ -1,40 +1,36 @@
 import streamlit as st
+import os
 from chat import ChatBot    
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
-FILE = [
-    'preprocessing-script/col_reference.pkl', 
-    'preprocessing-script/cols2.pkl', 
-    'dat/raw-2/chatbot_cost_tables_ts.csv', 
-    'dat/raw-2/chatbot_pca_data_items.csv', 
-    'dat/raw-2/chatbot_projects.csv',
-    'dat/output'
-    ]
 
-def chat(pid):
-    """
-    self.user_dat = Preprocess(
-        portfolio_id, 
-        directory_paths[0], 
-        directory_paths[1], 
-        directory_paths[2], 
-        directory_paths[3], 
-        directory_paths[4], 
-        directory_paths[5])
-    self.user_file_path = self.user_dat.get_merged_csv()
-    """
-    pass
+def get_csv_files():
+    # Define your path to the directory containing the CSV files
+    path = 'chatbot_doc_export_231/'
+    csv_files = []
+
+    # Walk through the directory
+    for dirpath, dirnames, files in os.walk(path):
+        for file in files:
+            if file.endswith('.csv'):
+                # Construct full file path
+                file_path = os.path.join(dirpath, file)
+                csv_files.append(file_path)
+
+    return csv_files
+
 
 def main():
-    processed_file = 'dat/output/pid_539_processed_data.csv'
     # Initialize frequently asked question
+    
     faq_questions = [
-        "What is the client information in the report?", 
-        "what is the name of the client mentioned in the report?",
+        #"What is the client information in the report?", 
+        #"what is the name of the client mentioned in the report?",
         # "What is the REVIEWER INFO of the report?",
-        "What is an overview of the overall condition of the building?",
-        "What is the total reported costs for maintaining the building?"
+        #"What is an overview of the overall condition of the building?",
+        #"What is the total reported costs for maintaining the building?"
     ]
+    
 
     # Initialize chat history
     if "messages" not in st.session_state:
@@ -43,7 +39,7 @@ def main():
     if 'buffer_memory' not in st.session_state:
         st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-    chatbot = ChatBot(file_path = processed_file, memory = st.session_state.buffer_memory)
+    chatbot = ChatBot(portfolio_folder = get_csv_files(), memory = st.session_state.buffer_memory)
 
     st.title("Partner ESI Chatbot")
     # Initialize session state for chat input
@@ -55,6 +51,7 @@ def main():
             st.markdown(message["content"])
 
     # Generate a button for each FAQ question
+
     for question in faq_questions:
         if st.button(question):
             # Update the chat input with the question from the button pressed
@@ -77,11 +74,12 @@ def main():
     
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
-            response = chatbot.getRespond(prompt)
+            response = chatbot.get_response(prompt)
             st.markdown(f'Assistant: {response}')
 
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
+    
 
 if __name__ == '__main__':
     main()
