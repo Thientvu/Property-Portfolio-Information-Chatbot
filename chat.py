@@ -8,28 +8,33 @@ from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
+# # Step 1: Detect the encoding of the original CSV file
+# def detect_encoding(file_path):
+#     with open(file_path, 'rb') as f:
+#         raw_data = f.read(10000)  # Read some bytes to guess the encoding
+#         result = chardet.detect(raw_data)
+#         return result['encoding']
+
+# # Step 2: Read the CSV file with the detected encoding
+# def read_csv(file_path, encoding):
+#     data = []
+#     with open(file_path, 'r', encoding=encoding) as f:
+#         reader = csv.reader(f)
+#         for row in reader:
+#             # Here you can process your data if necessary
+#             data.append(row)
+#     return data
+
+# # Step 3: Write the data back to a new CSV file with UTF-8 encoding
+# def write_csv(data, output_file_path):
+#     with open(output_file_path, 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.writer(f)
+#         for row in data:
+#             writer.writerow(row)
+
 class ChatBot:
-    def __init__(self, portfolio_id, directory_paths, memory):
-        self.user_dat = Preprocess(
-            portfolio_id, 
-            directory_paths[0], 
-            directory_paths[1], 
-            directory_paths[2], 
-            directory_paths[3], 
-            directory_paths[4], 
-            directory_paths[5])
-        self.user_file_path = self.user_dat.get_merged_csv()
-        new_file = 'dat/working.csv'
-
-        # Open the original file with an encoding that's likely to support the problematic characters
-        with codecs.open(self.user_file_path, 'r', encoding='latin-1', errors='replace') as file:
-            # Open the new file where the cleaned content will be stored
-            with codecs.open(new_file, 'w', encoding='utf-8') as cleaned_file:
-                for line in file:
-                    # Write each line to the new file in UTF-8 encoding
-                    cleaned_file.write(line)
-
-        self.userdb = createVector(new_file)
+    def __init__(self, file_path, memory):    
+        self.userdb = createVector(file_path)
 
         # self.user_file_path = 'dat/working.csv'
         # self.userdb = createVector(self.user_file_path)

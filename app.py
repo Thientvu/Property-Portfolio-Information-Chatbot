@@ -11,7 +11,22 @@ FILE = [
     'dat/output'
     ]
 
+def chat(pid):
+    """
+    self.user_dat = Preprocess(
+        portfolio_id, 
+        directory_paths[0], 
+        directory_paths[1], 
+        directory_paths[2], 
+        directory_paths[3], 
+        directory_paths[4], 
+        directory_paths[5])
+    self.user_file_path = self.user_dat.get_merged_csv()
+    """
+    pass
+
 def main():
+    processed_file = 'dat/output/pid_539_processed_data.csv'
     # Initialize frequently asked question
     faq_questions = [
         "What is the client information in the report?", 
@@ -28,7 +43,7 @@ def main():
     if 'buffer_memory' not in st.session_state:
         st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-    chatbot = ChatBot(portfolio_id = '539', directory_paths = FILE, memory = st.session_state.buffer_memory)
+    chatbot = ChatBot(file_path = processed_file, memory = st.session_state.buffer_memory)
 
     st.title("Partner ESI Chatbot")
     # Initialize session state for chat input
