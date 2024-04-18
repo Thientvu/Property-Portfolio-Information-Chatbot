@@ -1,0 +1,5 @@
+portfolio_id,project_id,section_reference,category,section,subsection,cost_related,docu_txt
+231,246479,3.1,Property Characteristics,Parcel Configuration,,False,"Acreage is and comprised approximately 0.40 acres., Acreage source is (per the Guilford tax assessor)"
+231,246479,4.3.1,,,,,"There is an Single-year event Reserve cost item regarding Exterior cleaning, painting, sealing for total unit of 15000 SF that have 5 years remaining useful life with total cost of 15000.0 dollars, year 5 costs $15000.0."
+231,246479,4.4.1,,,,,"There is an Single-year event Reserve cost item regarding Roof replacement - EPDM for total unit of 12000 SF that have 5 years remaining useful life with total cost of 72000.0 dollars, year 5 costs $72000.0."
+231,246479,5.2,Mechanical and Electrical Systems,"Heating, Ventilation, and Air Conditioning (HVAC)",,,"There is an Single-year event Reserve cost item regarding HVAC package unit (RTU), Replace for total unit of 67.5 TON that have 5 years remaining useful life with total cost of 81000.0 dollars, year 5 costs $81000.0."

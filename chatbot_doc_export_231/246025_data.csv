@@ -1,0 +1,6 @@
+portfolio_id,project_id,section_reference,category,section,subsection,cost_related,docu_txt
+231,246025,3.1,Property Characteristics,Parcel Configuration,,False,"Acreage is and comprised approximately 18.47 acres., Acreage source is (per the Butler County tax assessor)"
+231,246025,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",False,ADA (including van spaces) is five
+231,246025,3.2.2,Property Characteristics,Site Improvements,"Vehicular Access, Paving",,"There is an Single-year event Reserve cost item regarding Asphalt seal coat & striping for total unit of 75000 SF that have 2 years remaining useful life with total cost of 9000.0 dollars, year 2 costs $9000.0, year 7 costs $9000.0, year 12 costs $9000.0."
+231,246025,4.3.1,,,,,"There is an Single-year event Reserve cost item regarding Exterior maintenance - cleaning, painting, masonry pointing, sealing for total unit of 10000 SF that have 7 years remaining useful life with total cost of 10000.0 dollars, year 7 costs $10000.0."
+231,246025,5.2,Mechanical and Electrical Systems,"Heating, Ventilation, and Air Conditioning (HVAC)",,,"There is an Spread Reserve cost item regarding Office split-system components, Replace for total unit of 6 TON that have 10 years remaining useful life with total cost of 7200.0 dollars, year 10 costs $3600.0, year 11 costs $3600.0."
