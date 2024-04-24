@@ -22,6 +22,7 @@ class Preprocessor:
         return portfoilo_df['id'].unique().tolist()
 
     def cost_tables_processor(self):
+        # TODO: Fix the column names to make sure they are not set as empty
         ts = pd.read_csv(self.cost_tables,
                          dtype={'a_column': str, 'id': str, 'a_column': str, 'project_id': str}
                          # parse_dates=['created_at', 'updated_at']
@@ -132,6 +133,10 @@ class Preprocessor:
         pca_items_gb['cost_related'] = False
 
         return pca_items_gb
+    
+    def portfolio_data_processor(self):
+        # TODO: Implement this method, the new project id should set as -1, and make sure it can answer general questions
+        pass
 
     def merge_parts(self):
         self.cost_tables_processor()

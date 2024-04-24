@@ -17,6 +17,8 @@ class ChatBot:
 
         self.llm = ChatOpenAI(model_name='gpt-4-turbo-preview', openai_api_key=openai_api_key, temperature=0)
 
+        # TODO: Give system message to make sure the chatbot will grab info from project -1 if asking for a general question
+
         self.template = """
         Instructions:
         1. Reason before answering.
