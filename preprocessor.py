@@ -159,6 +159,7 @@ class Preprocessor:
         return df_union
     
     def export_combined_data(self):
+        # TODO: Suggest from sponsor to export all the data in a single CSV file
         parent_dir = Path('chatbot_doc_export_' + str(self.portfolio_id))
 
         # Create a blank DataFrame to store the combined data
