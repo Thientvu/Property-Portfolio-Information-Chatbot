@@ -22,6 +22,7 @@ class Preprocessor:
         return portfoilo_df['id'].unique().tolist()
 
     def cost_tables_processor(self):
+        # TODO: Fix the column names to make sure they are not set as empty
         ts = pd.read_csv(self.cost_tables,
                          dtype={'a_column': str, 'id': str, 'a_column': str, 'project_id': str}
                          # parse_dates=['created_at', 'updated_at']
@@ -132,6 +133,10 @@ class Preprocessor:
         pca_items_gb['cost_related'] = False
 
         return pca_items_gb
+    
+    def portfolio_data_processor(self):
+        # TODO: Implement this method, the new project id should set as -1, and make sure it can answer general questions
+        pass
 
     def merge_parts(self):
         self.cost_tables_processor()
@@ -152,6 +157,37 @@ class Preprocessor:
                              'cost_related', 'docu_txt']]
 
         return df_union
+    
+    def export_combined_data(self):
+        # TODO: Suggest from sponsor to export all the data in a single CSV file
+        parent_dir = Path('chatbot_doc_export_' + str(self.portfolio_id))
+
+        # Create a blank DataFrame to store the combined data
+        final_df = pd.DataFrame()
+
+        # Create the directory if it doesn't exist
+        parent_dir.mkdir(parents=True, exist_ok=True)
+
+        merge_parts = self.merge_parts()
+
+        for project_id in self.project_id_lst:
+            # Filter the data for the current project ID
+            export_df = merge_parts[merge_parts['project_id'] == project_id].copy()  # Ensure a copy is made here
+
+            # Use .loc to avoid SettingWithCopyWarning
+            export_df.loc[:, 'portfolio_id'] = self.portfolio_id
+            export_df.loc[:, 'project_id'] = project_id
+            
+            # Define the new column order to make 'portfolio_id' and 'project_id' the first columns
+            columns_order = ['portfolio_id', 'project_id'] + [col for col in export_df.columns if col not in ['portfolio_id', 'project_id']]
+            export_df = export_df[columns_order]
+            
+            # Combine all the text data into a single column
+            export_df['docu_txt'] = export_df.groupby(['project_id', 'section_reference'])['docu_txt'].transform(lambda x: ', '.join(x))
+            
+            # Add the combined data into the final DataFrame
+            final_df = pd.concat([final_df, export_df], ignore_index=True)
+        final_df.to_csv(f'{self.portfolio_id}_data.csv', index=False)
 
     def export_processed_data(self):
         parent_dir = Path('chatbot_doc_export_' + str(self.portfolio_id))
@@ -189,6 +225,7 @@ if __name__ == '__main__':
                                    data_items, projects)
 
     preprocess_data.export_processed_data()
+    preprocess_data.export_combined_data()
 
     # print(preprocess_data.merge_parts())
     # preprocess_data.merge_parts()
