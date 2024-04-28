@@ -1,12 +1,20 @@
 import streamlit as st
 import os
+import datetime
 from chat import ChatBot    
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
+def update_history(session_state, portfolio_id=None, timestamp=None):
+    # Define history file path with current timestamp
+    HistoryPath = f'history/chat_history_{portfolio_id}/'
+    HistoryFile = f'{timestamp}.txt'
+    os.makedirs(HistoryPath, exist_ok=True)
+    # Write chat history to file
+    with open(os.path.join(HistoryPath, HistoryFile), 'w') as file:
+        for message in session_state.messages:
+            file.write(f'{message["role"]}: {message["content"]}\n')
 
-def get_csv_files():
-    # Define your path to the directory containing the CSV files
-    path = 'chatbot_doc_export_231/'
+def get_csv_files(path):
     csv_files = []
 
     # Walk through the directory
@@ -19,67 +27,88 @@ def get_csv_files():
 
     return csv_files
 
-
 def main():
-    # Initialize frequently asked question
-    
-    faq_questions = [
-        #"What is the client information in the report?", 
-        #"what is the name of the client mentioned in the report?",
-        # "What is the REVIEWER INFO of the report?",
-        #"What is an overview of the overall condition of the building?",
-        #"What is the total reported costs for maintaining the building?"
-    ]
-    
+    st.set_page_config(page_title="Partner ESI Chatbot", page_icon=":robot:", layout="centered")
+    # Ask the user to input the portfolio ID if the id is -1
+    if "pid" not in st.session_state:
+        st.title("Welcome to Partner ESI Chatbot")
+        st.write("Please enter the portfolio ID to start the chatbot.")
 
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+        # Create a form to get the portfolio ID
+        form = st.form(key='my-form')
+        pid = form.text_input('Your portfolio ID')
+        submit = form.form_submit_button('Submit')
+        if submit:
+            st.session_state.pid = pid
+            st.rerun()
 
-    if 'buffer_memory' not in st.session_state:
-        st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
+    # Display the chatbot
+    else:
+        # Define current timestamp
+        ts = datetime.datetime.now().timestamp()
 
-    chatbot = ChatBot(portfolio_folder = get_csv_files(), memory = st.session_state.buffer_memory)
+        # Define your path to the directory containing the CSV files
+        CSVPath = f'chatbot_doc_export_{st.session_state.pid}/'
 
-    st.title("Partner ESI Chatbot")
-    # Initialize session state for chat input
-    st.session_state.chat_input = None
+        # Initialize frequently asked question
+        faq_questions = [
+            #"What is the client information in the report?", 
+            #"what is the name of the client mentioned in the report?",
+            # "What is the REVIEWER INFO of the report?",
+            #"What is an overview of the overall condition of the building?",
+            #"What is the total reported costs for maintaining the building?"
+        ]
+        
 
-    # Display chat messages from history on app rerun
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+        # Initialize chat history
+        if "messages" not in st.session_state:
+            st.session_state.messages = []
 
-    # Generate a button for each FAQ question
+        if 'buffer_memory' not in st.session_state:
+            st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-    for question in faq_questions:
-        if st.button(question):
-            # Update the chat input with the question from the button pressed
-            st.session_state.chat_input = question
+        chatbot = ChatBot(portfolio_folder = get_csv_files(CSVPath), memory = st.session_state.buffer_memory)
 
-    # React to user input
-    # prompt = st.chat_input("Ask me anything in the porfolio...")
-    prompt = st.chat_input("Ask me anything in the porfolio...")
+        st.title("Partner ESI Chatbot")
+        st.write("Your portfolio ID is: ", st.session_state.pid)
+        # Initialize session state for chat input
+        st.session_state.chat_input = None
 
-    if prompt or st.session_state.chat_input:
-        # Use the chat input if the user has not typed anything
-        if not prompt:
-            prompt = st.session_state.chat_input
-        # Display user message in chat message container
-        with st.chat_message("user"):
-            st.markdown(f'User: {prompt}')
+        # Display chat messages from history on app rerun
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
 
-        # Add user message to chat history
-        st.session_state.messages.append({"role": "user", "content": prompt})
-    
-        # Display assistant response in chat message container
-        with st.chat_message("assistant"):
-            response = chatbot.get_response(prompt)
-            st.markdown(f'Assistant: {response}')
+        # Generate a button for each FAQ question
 
-        # Add assistant response to chat history
-        st.session_state.messages.append({"role": "assistant", "content": response})
-    
+        for question in faq_questions:
+            if st.button(question):
+                # Update the chat input with the question from the button pressed
+                st.session_state.chat_input = question
+
+        # React to user input
+        # prompt = st.chat_input("Ask me anything in the porfolio...")
+        prompt = st.chat_input("Ask me anything in the porfolio...")
+
+        if prompt or st.session_state.chat_input:
+            # Use the chat input if the user has not typed anything
+            if not prompt:
+                prompt = st.session_state.chat_input
+            # Display user message in chat message container
+            with st.chat_message("user"):
+                st.markdown(f'User: {prompt}')
+
+            # Add user message to chat history
+            st.session_state.messages.append({"role": "user", "content": prompt})
+        
+            # Display assistant response in chat message container
+            with st.chat_message("assistant"):
+                response = chatbot.get_response(prompt)
+                st.markdown(f'Assistant: {response}')
+
+            # Add assistant response to chat history
+            st.session_state.messages.append({"role": "assistant", "content": response})
+            update_history(st.session_state, st.session_state.pid, ts)
 
 if __name__ == '__main__':
     main()
