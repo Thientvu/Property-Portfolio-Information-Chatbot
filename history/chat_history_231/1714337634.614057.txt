@@ -1,0 +1,4 @@
+user: How many buildings do I have
+assistant: Based on the chat history provided, it appears there are four distinct project IDs mentioned (246074, 246480, 246065, 246077, and 246064), each associated with a different count of ADA-designated parking spaces. This suggests that there are at least four buildings in your portfolio, assuming each project ID corresponds to a separate building.
+
+Thank you for asking, Is there anything else I can help you with?
