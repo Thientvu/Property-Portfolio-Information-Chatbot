@@ -17,7 +17,7 @@ class Preprocessor:
         self.ts_lt_gb = None
 
     def get_portfolio_project_ids(self):
-        projects_df = pd.read_csv(projects, dtype={'id': str})
+        projects_df = pd.read_csv(self.projects, dtype={'id': str})
         portfoilo_df = projects_df[projects_df['portfolio_id'] == self.portfolio_id]
         return portfoilo_df['id'].unique().tolist()
 
@@ -136,7 +136,20 @@ class Preprocessor:
     
     def portfolio_data_processor(self):
         # TODO: Implement this method, the new project id should set as -1, and make sure it can answer general questions
-        pass
+        
+        cost_data = self.cost_tables_processor()
+        
+        # Aggregate
+        total_cost_sum = cost_data['total_cost'].sum()
+        
+        general_info = pd.DataFrame({
+            'project_id': [-1],
+            'total_cost': [total_cost_sum]
+            # Can add more general info
+        })
+        
+        return general_info
+
 
     def merge_parts(self):
         self.cost_tables_processor()
@@ -213,6 +226,23 @@ class Preprocessor:
             export_df.to_csv(f'{parent_dir}/{project_id}_data.csv', index=False)
 
 
+# Test function
+def test_portfolio_data_processor():
+    # Mock data
+    mock_cost_data = pd.DataFrame({
+        'project_id': ['1', '2', '3'],
+        'total_cost': [1200, 1500, 1800]
+    })
+
+    preprocessor = Preprocessor(portfolio_id='123', cols='preprocessing-script/col_reference.pkl', cols2='preprocessing-script/cols2.pkl',
+                                cost_tables=mock_cost_data,
+                                data_items='dat/raw-2/chatbot_pca_data_items.csv', projects='dat/raw-2/chatbot_projects.csv')
+
+    preprocessor.cost_tables_processor = lambda: mock_cost_data
+
+    result = preprocessor.portfolio_data_processor()
+    print(result)
+
 
 if __name__ == '__main__':
     cols = 'preprocessing-script/col_reference.pkl'
@@ -227,8 +257,10 @@ if __name__ == '__main__':
     preprocess_data.export_processed_data()
     preprocess_data.export_combined_data()
 
-    # print(preprocess_data.merge_parts())
-    # preprocess_data.merge_parts()
+    print(preprocess_data.merge_parts())
+    preprocess_data.merge_parts()
+
+
 
 
 
