@@ -1,12 +1,20 @@
 import streamlit as st
 import os
+import datetime
 from chat import ChatBot    
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
+def update_history(session_state, portfolio_id=None, timestamp=None):
+    # Define history file path with current timestamp
+    HistoryPath = f'history/chat_history_{portfolio_id}/'
+    HistoryFile = f'{timestamp}.txt'
+    os.makedirs(HistoryPath, exist_ok=True)
+    # Write chat history to file
+    with open(os.path.join(HistoryPath, HistoryFile), 'w') as file:
+        for message in session_state.messages:
+            file.write(f'{message["role"]}: {message["content"]}\n')
 
-def get_csv_files():
-    # Define your path to the directory containing the CSV files
-    path = 'chatbot_doc_export_231/'
+def get_csv_files(path):
     csv_files = []
 
     # Walk through the directory
@@ -19,10 +27,17 @@ def get_csv_files():
 
     return csv_files
 
-
 def main():
+    # Define current timestamp
+    ts = datetime.datetime.now().timestamp()
+
+    # Define portfolio ID
+    portfolio_id = 231
+
+    # Define your path to the directory containing the CSV files
+    CSVPath = f'chatbot_doc_export_{portfolio_id}/'
+
     # Initialize frequently asked question
-    
     faq_questions = [
         #"What is the client information in the report?", 
         #"what is the name of the client mentioned in the report?",
@@ -39,7 +54,7 @@ def main():
     if 'buffer_memory' not in st.session_state:
         st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-    chatbot = ChatBot(portfolio_folder = get_csv_files(), memory = st.session_state.buffer_memory)
+    chatbot = ChatBot(portfolio_folder = get_csv_files(CSVPath), memory = st.session_state.buffer_memory)
 
     st.title("Partner ESI Chatbot")
     # Initialize session state for chat input
@@ -79,7 +94,7 @@ def main():
 
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
-    
+        update_history(st.session_state, portfolio_id, ts)
 
 if __name__ == '__main__':
     main()
