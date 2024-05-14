@@ -67,7 +67,7 @@ def main():
         if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-        chatbot = ChatBot(portfolio_folder = get_csv_files(CSVPath), memory = st.session_state.buffer_memory)
+        chatbot = ChatBot(portfolio_folder = get_csv_files(CSVPath), portfolio_id = st.session_state.pid, memory = st.session_state.buffer_memory)
 
         st.title("Partner ESI Chatbot")
         st.write("Your portfolio ID is: ", st.session_state.pid)
