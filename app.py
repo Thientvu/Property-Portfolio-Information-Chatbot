@@ -1,7 +1,8 @@
 import streamlit as st
 import os
 import datetime
-from chat import ChatBot    
+from chat import ChatBot   
+from vectordb import createVector 
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
 def update_history(session_state, portfolio_id=None, timestamp=None):
@@ -67,7 +68,18 @@ def main():
         if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages = True)
 
-        chatbot = ChatBot(portfolio_folder = get_csv_files(CSVPath), memory = st.session_state.buffer_memory)
+        ### ORIGINAL ###
+        # pfolder = get_csv_files(CSVPath)
+        # user_db = [createVector(pfolder)]
+        # chatbot = ChatBot(portfolio_folder = pfolder, memory = st.session_state.buffer_memory, user_db = user_db)
+
+        ### TESTING ###
+        pfolder = get_csv_files(CSVPath)
+        user_db = []
+        for csv in pfolder:
+            user_db.append(createVector([csv]))
+        chatbot = ChatBot(portfolio_folder = pfolder, memory = st.session_state.buffer_memory, user_db = user_db)
+        ### END TESTING ###
 
         st.title("Partner ESI Chatbot")
         st.write("Your portfolio ID is: ", st.session_state.pid)
