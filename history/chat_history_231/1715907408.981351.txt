@@ -1,0 +1,4 @@
+user: what is the name of the portfolio
+assistant: {'question': 'what is the name of the portfolio', 'chat_history': [], 'answer': 'The name of the portfolio is 231.\n\nThank you for asking, Is there anything else I can help you with?'}
+user: how many projects are there in the portfolio?
+assistant: {'question': 'how many projects are there in the portfolio?', 'chat_history': [HumanMessage(content='what is the name of the portfolio'), AIMessage(content='The name of the portfolio is 231.\n\nThank you for asking, Is there anything else I can help you with?')], 'answer': 'There are 36 projects in portfolio 231.\n\nThank you for asking, Is there anything else I can help you with?'}

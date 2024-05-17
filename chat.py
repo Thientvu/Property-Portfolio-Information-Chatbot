@@ -1,163 +1,109 @@
 import os
 from dotenv import load_dotenv
-from vectordb import createVector
-from langchain_openai import ChatOpenAI
-from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
-
-### ORIGINAL ###
-# class ChatBot:
-#     def __init__(self, portfolio_folder, memory, user_db):  
-#         self.user_db = user_db
-#         load_dotenv()  
-
-#         openai_api_key = os.getenv('OPENAI_API_KEY')
-#         if not openai_api_key:
-#             raise ValueError("OPENAI_API_KEY is not set in the environment variables.")
-
-#         self.llm = ChatOpenAI(model_name='gpt-4-turbo-preview', openai_api_key=openai_api_key, temperature=0)
-
-#         # TODO: Give system message to make sure the chatbot will grab info from project -1 if asking for a general question
-
-#         self.template = """
-#         Instructions:
-#         1. Reason before answering.
-#         2. Keep the answer truthful and concise.
-#         3. If uncertain, respond with "I'm not sure, please contact our representative."
-#         4. If the question involves calculations, outline the step-by-step process to derive the results.
-#         5. Format the answer to be readable.
-#         6. After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
-#         Question:
-#         {question}
-#         Chat History:
-#         {chat_history}
-#         Context:
-#         {context}
-#         """
-
-#         self.qa_chain_prompt = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=self.template)
-
-#         self.qa = ConversationalRetrievalChain.from_llm(
-#             self.llm,
-#             retriever = self.user_db.as_retriever(search_type="mmr", search_kwargs={"k" : 100}),
-#             chain_type='stuff',  
-#             memory=memory,
-#             verbose=True,
-#             combine_docs_chain_kwargs={'prompt': self.qa_chain_prompt}
-#         )
-
-#     def get_response(self, messages) -> str:
-#         result = self.qa({"question": messages})
-#         return result['answer']
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain.agents import create_react_agent, AgentExecutor
+from langchain.tools.retriever import create_retriever_tool
+from langchain_openai import ChatOpenAI
+from langchain import hub
+from langchain_core.output_parsers import StrOutputParser
 
 
-### TESTING ###
 class ChatBot:
-    def __init__(self, portfolio_folder, memory, user_db):  
-        self.user_db = user_db
+    def __init__(self, portfolio_folder, portfolio_id, memory, user_dbs):
+        self.user_dbs = user_dbs
         self.memory = memory
         self.portfolio_folder = portfolio_folder
-        load_dotenv()  
+        self.portfolio_id = portfolio_id
 
+        # Load environment variables
+        load_dotenv()
         openai_api_key = os.getenv('OPENAI_API_KEY')
         if not openai_api_key:
             raise ValueError("OPENAI_API_KEY is not set in the environment variables.")
 
+        # Initialize the LLM
         self.llm = ChatOpenAI(model_name='gpt-4-turbo-preview', openai_api_key=openai_api_key, temperature=0)
 
-        # TODO: Give system message to make sure the chatbot will grab info from project -1 if asking for a general question
+        # Process the portfolio_folder to remove specific substrings
+        self.processed_list_of_projects = [project.replace("chatbot_doc_export_231/", "").replace("_data.csv", "") for project in self.portfolio_folder]
+        projects = ", ".join(self.processed_list_of_projects)
 
-        self.template = """
-        Instructions:
-        1. Reason before answering.
-        2. Keep the answer truthful and concise.
-        3. If uncertain, respond with "I'm not sure, please contact our representative."
-        4. Try to find the answer from the user prompt instead of using the vector database.
-        5. If the question involves calculations, outline the step-by-step process to derive the results.
-        6. Format the answer to be readable.
-        7. After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
-        Question:
-        {question}
-        Chat History:
-        {chat_history}
-        Context:
-        {context}
-        """
+        # Get retrievers
+        tools = self.get_retrievers()
 
-        self.qa_chain_prompt = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=self.template)
+        # Create prompt template
+        template = f'''
+        I am a business executive. I am trying to understand information about the projects in my PCA report portfolio.
+        You are a chatbot, helping me answering my question. To give you more information about the context, look at the list below:
 
-        self.qa = ConversationalRetrievalChain.from_llm(
-            self.llm,
-            retriever = self.user_db[0].as_retriever(search_type="mmr", search_kwargs={"k" : 100}),
-            chain_type='stuff',  
+        The name and id of the portfolio is {self.portfolio_id}.
+        There are {len(self.processed_list_of_projects)} projects. The project names and ids in the portfolio are {projects}. 
+        If the question involves calculations, outline the step-by-step process to derive the results.
+        If the question involves calculations, outline the step-by-step process and all the numbers that are used to come to the results.
+        Provide examples or additional context if it helps clarify the answer.
+        Keep the answer truthful and concise. Don't make up answers. Format the answer to be readable and user-friendly.
+        Reason before answering. Keep the answer truthful and concise. Don't make up answers. Format the answer to be readable and user-friendly.
+        After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
+
+        You have access to the following tools: {{tools}}
+
+        Use the following format:
+
+        Question: the input question you must answer
+        Thought: you should always think about what to do. 
+        Action: the action to take, should be one of [{{tool_names}}]
+        Action Input: the input to the action
+        Observation: the result of the action
+        ... When asked about a specific project, run the specifc retriver of the project. When asked about the entire portfolio, run all the retrievers and sum it up. (this Thought/Action/Action Input/Observation can repeat at most 2 times)
+
+        Thought: I now know the final answer
+        Final Answer: the final answer to the original input question
+
+        Question: {{question}}
+        Chat History: {{chat_history}}
+        Thought:{{agent_scratchpad}}
+        '''
+
+        self.prompt = PromptTemplate.from_template(template)
+
+        # Create agent
+        agent = create_react_agent(
+            llm=self.llm,
+            tools=tools,
+            prompt=self.prompt
+        )
+
+        # Create the agent executor
+        self.conversational_agent = AgentExecutor.from_agent_and_tools(
+            agent=agent,
+            tools=tools,
+            llm = self.llm,
+            verbose=True,
             memory=memory,
-            verbose=True,
-            combine_docs_chain_kwargs={'prompt': self.qa_chain_prompt}
+            handle_parsing_errors=True
         )
 
-    def get_response(self, messages) -> str:
-        data_str = self.get_single_answers(messages)
-        temp_template = """
-        Instructions:
-        1. Reason before answering.
-        2. Keep the answer truthful and concise.
-        3. If uncertain, respond with "I'm not sure, please contact our representative."
-        4. Try to find the answer from the data in this template first rather than the vector database.
-        5. If the question involves calculations, outline the step-by-step process to derive the results.
-        6. Format the answer to be readable.
-        7. After each response, place 'Thank you for asking, Is there anything else I can help you with?' 1 line after the answer.
-        8. Here is some data to help you answer the question: """ + data_str + """
-        Question:
-        {question}
-        Chat History:
-        {chat_history}
-        Context:
-        {context}
-        """
+    def get_response(self, question):
+        result = self.conversational_agent.invoke({"question": question})
+        return result['output']
 
-        temp_qa_chain_prompt = PromptTemplate(input_variables=['question', 'chat_history', 'context'], template=temp_template)
+    def get_retrievers(self):
+        tools = []
 
-        temp_qa = ConversationalRetrievalChain.from_llm(
-            self.llm,
-            retriever = self.user_db[0].as_retriever(search_type="mmr", search_kwargs={"k" : 100}),
-            chain_type='stuff',  
-            memory=self.memory,
-            verbose=True,
-            combine_docs_chain_kwargs={'prompt': temp_qa_chain_prompt}
-        )
-        result = temp_qa({"question": messages})
-        return result['answer']
-    
-    def get_single_answers(self, messages) -> str:
-        return_str = ""
-        responses = []
-        temp_template = """
-        Instructions:
-        1. Reason before answering.
-        2. Keep the answer truthful and concise.
-        3. If uncertain, respond with "I'm not sure, please contact our representative."
-        4. If the question involves calculations, outline the step-by-step process to derive the results.
-        5. Format the answer to be readable.
-        Question:
-        {question}
-        Context:
-#       {context}
-        """
-        temp_qa_chain_prompt = PromptTemplate(input_variables=['question'], template=temp_template)
-        for vector in self.user_db:
-            temp_qa = ConversationalRetrievalChain.from_llm(
-                self.llm,
-                retriever=vector.as_retriever(search_type="mmr", search_kwargs={"k" : 10}),
-                chain_type='stuff',  
-                memory=self.memory,
-                verbose=True,
-                combine_docs_chain_kwargs={'prompt': temp_qa_chain_prompt}
+        # Wrap our vectorstore
+        compressor = LLMChainExtractor.from_llm(self.llm)
+
+        for i, vectordb in enumerate(self.user_dbs):
+            retriever = vectordb.as_retriever(search_type="similarity", search_kwargs={"k" : len(self.processed_list_of_projects)})
+
+            tool = create_retriever_tool(
+                retriever=retriever,
+                name=f"retriever {self.processed_list_of_projects[i]}",
+                description=f"Search for information about project id {self.processed_list_of_projects[i]}. For any questions related to project id {self.processed_list_of_projects[i]}, you must use this tool!"
             )
-            result = temp_qa({"question": messages})
-            responses.append(result['answer'])
 
-        for i, response in enumerate(responses, start=1):
-            return_str += f'Response {i}: {response}\n\n'
+            tools.append(tool)
 
-        return return_str
-### END TESTING ###
+        return tools

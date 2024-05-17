@@ -1,0 +1,4 @@
+user: what is the maintenance cost of project 246078
+assistant: The maintenance cost of project 246078 is $10,000. This cost is associated with exterior cleaning, pointing, and panel sealant for a total unit of 1 LS with 7 years remaining useful life, and the cost is incurred in year 7.
+
+Thank you for asking, Is there anything else I can help you with?

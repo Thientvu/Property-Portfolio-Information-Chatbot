@@ -1,0 +1,4 @@
+user: how many projects are there in the portfolio?
+assistant: There are 36 projects in the portfolio.
+
+Thank you for asking, Is there anything else I can help you with?

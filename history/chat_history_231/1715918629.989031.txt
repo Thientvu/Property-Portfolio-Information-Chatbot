@@ -1,0 +1,4 @@
+user:  give me the maintenance cost of project 246480
+assistant: The maintenance cost of project 246480 for exterior cleaning, painting, and sealing is $250,000.0, with this cost expected in year 5.
+
+Thank you for asking, Is there anything else I can help you with?

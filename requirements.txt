@@ -1,12 +1,11 @@
 pandas==2.2.2
 numpy
-notebook
 jupyterlab
 openai
 langchain
 langchain-openai
 langchain_community
+langchainhub
 langsmith
 chromadb
-lark
 streamlit

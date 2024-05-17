@@ -1,0 +1,4 @@
+user: what is the total maintenance cost of project 246079
+assistant: The total maintenance cost of project 246079 is $95,000.0, which is for an Exterior cleaning, painting, sealing event for a total unit of 95000 SF with 9 years remaining useful life.
+
+Thank you for asking, Is there anything else I can help you with?

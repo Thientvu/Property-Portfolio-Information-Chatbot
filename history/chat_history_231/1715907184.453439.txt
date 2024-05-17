@@ -1,0 +1,2 @@
+user: what is the name of the portfolio
+assistant: {'question': 'what is the name of the portfolio', 'chat_history': [], 'answer': 'The name of the portfolio is 231.\n\nThank you for asking, Is there anything else I can help you with?'}

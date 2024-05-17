@@ -1,0 +1,14 @@
+user: what is the name of the portfolio?
+assistant: The name of the portfolio is 231.
+
+Thank you for asking, Is there anything else I can help you with?
+user: how many projects are there in the portfolio?
+assistant: There are 36 projects in the portfolio.
+
+Thank you for asking, Is there anything else I can help you with?
+user: give me the name of the first 3
+assistant: The names of the first 3 projects in the portfolio 231 are 246077, 246380, and 246061.
+
+Thank you for asking, Is there anything else I can help you with?
+user: give me some information on project 246077
+assistant: NO_OUTPUT

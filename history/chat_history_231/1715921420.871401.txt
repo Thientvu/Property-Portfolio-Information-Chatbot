@@ -1,0 +1,2 @@
+user: what is the total maintenance cost of this portfolio in the next 5 years?
+assistant: Agent stopped due to iteration limit or time limit.

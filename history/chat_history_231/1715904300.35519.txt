@@ -1,0 +1,2 @@
+user: give me some info about project 246024
+assistant: None
