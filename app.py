@@ -87,11 +87,8 @@ def main():
 
         # Initialize frequently asked question
         faq_questions = [
-            #"What is the client information in the report?", 
-            #"what is the name of the client mentioned in the report?",
-            # "What is the REVIEWER INFO of the report?",
-            #"What is an overview of the overall condition of the building?",
-            #"What is the total reported costs for maintaining the building?"
+            "What is the overview of this portfolio?",
+            "How many projects are there in the portfolio? What are they?"
         ]
 
         # Generate a button for each FAQ question
@@ -99,17 +96,14 @@ def main():
         for question in faq_questions:
             if st.button(question):
                 # Update the chat input with the question from the button pressed
+                prompt = question
                 st.session_state.chat_input = question
 
         # React to user input
         if not st.session_state.chat_input:
             prompt = st.chat_input("Ask me anything in the porfolio...")
 
-        if prompt or st.session_state.chat_input:
-            # Use the chat input if the user has not typed anything
-            if not prompt:
-                prompt = st.session_state.chat_input
-            # Display user message in chat message container
+        if prompt:
             with st.chat_message("user"):
                 st.markdown(f'User: {prompt}')
 
