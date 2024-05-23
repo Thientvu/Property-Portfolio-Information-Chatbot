@@ -60,6 +60,8 @@ def main():
             st.session_state.buffer_memory = ConversationBufferWindowMemory(memory_key="chat_history", return_messages=True)
                 
             st.session_state.chatbot = ChatBot(portfolio_folder=pfolder, portfolio_id=pid, memory=st.session_state.buffer_memory, user_dbs=user_dbs)
+            
+            st.session_state.chat_input = None
 
             st.rerun()
 
@@ -76,10 +78,6 @@ def main():
         st.title("Partner ESI Chatbot")
         st.write("Your portfolio ID is: ", st.session_state.pid)
 
-         # Initialize chat history
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
-
         # Display chat messages from history on app rerun
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
@@ -87,23 +85,24 @@ def main():
 
         # Initialize frequently asked question
         faq_questions = [
-            "What is the overview of this portfolio?",
-            "How many projects are there in the portfolio? What are they?"
+            "How many projects are there in the portfolio? What are they?",
+            "What is the total maintenance cost of project 246077"
         ]
-
+        
         # Generate a button for each FAQ question
-        st.session_state.chat_input = None
         for question in faq_questions:
             if st.button(question):
                 # Update the chat input with the question from the button pressed
-                prompt = question
                 st.session_state.chat_input = question
 
         # React to user input
-        if not st.session_state.chat_input:
-            prompt = st.chat_input("Ask me anything in the porfolio...")
+        prompt = st.chat_input("Ask me anything in the porfolio...")
 
-        if prompt:
+        if prompt or st.session_state.chat_input:
+            # Use the chat input if the user has not typed anything
+            if not prompt:
+                prompt = st.session_state.chat_input
+            # Display user message in chat message container
             with st.chat_message("user"):
                 st.markdown(f'User: {prompt}')
 
