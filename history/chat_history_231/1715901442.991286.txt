@@ -1,0 +1,8 @@
+user: what is the portfolio name?
+assistant: The name of the portfolio is 231.
+
+Thank you for asking. Is there anything else I can help you with?
+user: can you give me some data from portfolio 246077
+assistant: I'm sorry, but I can't access or provide real-time or specific data from portfolio 246077 or any other portfolio, including project details, maintenance records, cost estimates, or document summaries. My responses are generated based on a mixture of licensed data, publicly available information, and general knowledge. For detailed information on portfolio 246077, please refer to the appropriate database, document management system, or contact the portfolio manager directly.
+
+Thank you for asking. Is there anything else I can help you with?

@@ -1,0 +1,8 @@
+user: what is the name of the portfolio
+assistant: The name of the portfolio is 231.
+
+Thank you for asking, Is there anything else I can help you with?
+user: how many projects are there in the portfolio, what are they?
+assistant: There are 36 projects in the portfolio. The project names and ids in the portfolio are 246077, 246380, 246061, 246060, 246066, 246083, 246059, 246479, 246478, 246025, 246024, 246052, 246071, 246038, 246039, 246481, 246480, 246068, 246069, 246057, 246344, 246477, 246476, 246036, 246037, 246041, 246040, 246074, 246484, 246078, 246079, 246073, 246026, 246377, 246065, 246064.
+
+Thank you for asking, Is there anything else I can help you with?

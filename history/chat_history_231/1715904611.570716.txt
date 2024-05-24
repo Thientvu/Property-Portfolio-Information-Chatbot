@@ -1,0 +1,7 @@
+user: give me some information about project 246057
+assistant: Unfortunately, there is no available information on project 246057.
+user: what questions can you answer
+assistant: I can answer questions related to cost and repair needs for specific issues, such as immediate repair costs for walkway trip hazards caused by invasive tree roots, short-term repair costs for damaged pavement in drive aisles and parking areas, and the type of repairs needed. Additionally, I can provide information on property characteristics related to site improvements, including vehicular access and paving, specifically regarding ADA-designated parking spaces across different projects.
+user: can you tell me what portfolio this is 
+user: give me the total maitance cost of all the projects
+assistant: I am unable to provide the total maintenance cost of all the projects due to a lack of specific cost information from the retrievers.

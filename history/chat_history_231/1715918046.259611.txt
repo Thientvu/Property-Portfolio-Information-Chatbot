@@ -1,0 +1,6 @@
+user: give me the maintenance info of project_id: 246024
+assistant: For project_id 246024, there are two short-term (12-24 months) maintenance items mentioned:
+1. The painted finishes on the building are worn with areas of staining and deterioration throughout. Reapplication of exterior paint is recommended for a total of 28,000 SF with a total cost of $28,000.
+2. Deteriorated sealant was observed between the concrete tilt-up panels. Replacement of deteriorated sealant is recommended for a total of 1,750 LF with a total cost of $7,875.
+
+Thank you for asking, Is there anything else I can help you with?

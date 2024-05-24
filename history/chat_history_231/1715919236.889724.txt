@@ -1,0 +1,4 @@
+user: what is the maintenance cost of project 246079
+assistant: The maintenance cost for project 246079 is $95,000.0, which is for an exterior cleaning, painting, and sealing event for a total unit of 95000 SF with 9 years remaining useful life. The cost is scheduled for year 9.
+
+Thank you for asking, Is there anything else I can help you with?

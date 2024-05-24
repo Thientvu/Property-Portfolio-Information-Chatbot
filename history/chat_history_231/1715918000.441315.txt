@@ -1,0 +1,16 @@
+user: give me the maintenance info of project 246484
+assistant: The maintenance information for project 246484 includes several cost items across different projects within portfolio 231. These include:
+
+1. Short-term (12-24 months) maintenance for project 246024, involving reapplication of exterior paint over 28000 SF with a total cost of $28,000, and replacement of deteriorated sealant between concrete tilt-up panels over 1750 LF with a total cost of $7,875.
+
+2. Spread Reserve maintenance for project 246026, involving replacement of common area carpeting over 60000 SF with a total cost of $120,000, with costs spread over several years.
+
+3. Single-year event Reserve maintenance for project 246025, involving exterior maintenance (cleaning, painting, masonry pointing, sealing) over 10000 SF with a total cost of $10,000 in year 7.
+
+4. Single-year event Reserve maintenance for project 246071, involving exterior cleaning, painting, sealing over 26000 SF with a total cost of $26,000 in year 7.
+
+Thank you for asking, Is there anything else I can help you with?
+user: give me the maintenance info of project_id: 246024
+assistant: The maintenance information for project 246024 includes short-term (12-24 months) maintenance activities such as reapplication of exterior paint over 28,000 SF at a total cost of $28,000, and replacement of deteriorated sealant between concrete tilt-up panels over 1,750 LF at a total cost of $7,875.
+
+Thank you for asking, Is there anything else I can help you with?

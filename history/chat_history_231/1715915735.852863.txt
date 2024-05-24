@@ -1,0 +1,4 @@
+user: give me the mantenance cost of project 246052
+assistant: To find the maintenance cost of project 246052, you will need to directly access and review the content of chatbot_doc_export_231/246052_data.csv. Look for sections that discuss cost-related information, which may include maintenance expenses. If you have any further questions or need assistance with another topic, feel free to ask.
+
+Thank you for asking, Is there anything else I can help you with?

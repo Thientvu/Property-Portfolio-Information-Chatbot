@@ -1,0 +1,4 @@
+user: what is the maintenance cost of project 246344
+assistant: The maintenance cost of project 246344 includes a single-year event reserve cost of $66,000 for exterior cleaning, painting, and sealing due in year 8, and a spread reserve cost of $91,250 for recoating of the spray-applied foam roof covering, spread over years 5 to 7, with an annual cost of $30,416.67.
+
+Thank you for asking, Is there anything else I can help you with?
