@@ -24,7 +24,7 @@ class ChatBot:
             raise ValueError("OPENAI_API_KEY is not set in the environment variables.")
 
         # Initialize the LLM
-        self.llm = ChatOpenAI(model_name='gpt-4-turbo-preview', openai_api_key=openai_api_key, temperature=0)
+        self.llm = ChatOpenAI(model_name='gpt-3.5-turbo-0125', openai_api_key=openai_api_key, temperature=0)
 
         # Process the portfolio_folder to remove specific substrings
         self.processed_list_of_projects = [project.replace("chatbot_doc_export_231/", "").replace("_data.csv", "") for project in self.portfolio_folder]
